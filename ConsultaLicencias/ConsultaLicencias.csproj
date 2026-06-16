@@ -372,6 +372,10 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Documentacion\README.md" />
+    <Content Include="Documentacion\01-Arquitectura.md" />
+    <Content Include="Documentacion\02-FlujoAutenticacion.md" />
+    <Content Include="Documentacion\03-ConsultaHistorico.md" />
+    <Content Include="Documentacion\04-BitacoraRescate.md" />
     <None Include="Properties\PublishProfiles\101.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\Zip.pubxml" />
