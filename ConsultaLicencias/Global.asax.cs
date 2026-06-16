@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
-using System.Web.Security;
-using ConsultaLicencias;
 
 namespace ConsultaLicencias
 {
@@ -19,38 +16,101 @@ namespace ConsultaLicencias
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
 
+        protected void Application_BeginRequest(object sender, EventArgs e)
+        {
+            #if DEBUG
+            System.Diagnostics.Debug.WriteLine(
+                string.Format(
+                    "[{0:yyyy-MM-dd HH:mm:ss}] {1} {2}",
+                    DateTime.Now,
+                    Request.HttpMethod,
+                    Request.Url));
+            #endif
+        }
+
         void Application_End(object sender, EventArgs e)
         {
             //  Code that runs on application shutdown
 
         }
 
-        void Application_Error(object sender, EventArgs e)
+        protected void Application_Error(object sender, EventArgs e)
         {
             Exception ex = Server.GetLastError();
 
-            // Log the error (example: write to a file, database, or event log)
-            string errorMessage = $"Error occurred at {DateTime.Now}: {ex.Message}\nStack Trace: {ex.StackTrace}";
-            string logPath = Server.MapPath("~/App_Data/ErrorLog.txt");
-
-
             try
             {
-                // Append the error to a log file
-                System.IO.File.AppendAllText(logPath, errorMessage + "\n\n");
+                string appData = Server.MapPath("~/App_Data");
+
+                if (!Directory.Exists(appData))
+                    Directory.CreateDirectory(appData);
+
+                string logFile = Path.Combine(
+                    appData,
+                    $"ErrorLog_{DateTime.Now:yyyyMMdd}.txt");
+
+                HttpException httpEx = ex as HttpException;
+
+                int statusCode = 500;
+
+                if (httpEx != null)
+                    statusCode = httpEx.GetHttpCode();
+
+                string message =
+                    Environment.NewLine +
+                    "==================================================" +
+                    Environment.NewLine +
+                    $"Fecha        : {DateTime.Now:yyyy-MM-dd HH:mm:ss}" +
+                    Environment.NewLine +
+                    $"StatusCode   : {statusCode}" +
+                    Environment.NewLine +
+                    $"URL          : {Request.Url}" +
+                    Environment.NewLine +
+                    $"Usuario      : {(Context?.User?.Identity?.Name ?? "Anonimo")}" +
+                    Environment.NewLine +
+                    $"IP           : {Request.UserHostAddress}" +
+                    Environment.NewLine +
+                    $"Excepcion    : {ex?.GetType().FullName}" +
+                    Environment.NewLine +
+                    $"Mensaje      : {ex?.Message}" +
+                    Environment.NewLine +
+                    $"Inner        : {ex?.InnerException?.Message}" +
+                    Environment.NewLine +
+                    $"StackTrace   : {ex?.StackTrace}" +
+                    Environment.NewLine;
+
+                File.AppendAllText(logFile, message);
             }
             catch
             {
-                // Handle any issues with logging (e.g., file access issues)
-                // Optionally, you could use another logging mechanism here
+                // Nunca romper el manejador de errores.
             }
 
-            // Optionally, clear the error to prevent it from propagating
-            Server.ClearError();
+#if !DEBUG
 
-            // Redirect to a custom error page (optional)
-            //Response.Redirect("~/Error.aspx");
+HttpException httpException = ex as HttpException;
+int code = httpException?.GetHttpCode() ?? 500;
 
+Server.ClearError();
+
+switch (code)
+{
+    case 401:
+        Response.Redirect("~/Error401.aspx", false);
+        break;
+
+    case 404:
+        Response.Redirect("~/Error404.aspx", false);
+        break;
+
+    default:
+        Response.Redirect("~/Error500.aspx", false);
+        break;
+}
+
+Context.ApplicationInstance.CompleteRequest();
+
+#endif
         }
     }
 }
