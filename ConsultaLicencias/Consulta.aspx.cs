@@ -84,12 +84,7 @@ namespace ConsultaLicencias
             {
                 GridView1.DataSourceID = "edsPersonas";
                 GridView1.DataBind();
-            }
-            //else
-            //    if (Tabs.ActiveTab.ID.Equals("TabConsultaAvanzada"))
-            //    {
-
-            //    }
+            }            
         }
 
         protected void QueryingCP(object sender, CustomExpressionEventArgs e)

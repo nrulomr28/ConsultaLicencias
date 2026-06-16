@@ -82,11 +82,10 @@
                             <asp:Label ID="lblRol" runat="server" Text=""></asp:Label>
                         </td>
                         <td width="20%" id="IDCabeceraFechaHora" class="ClassCabeceraFechaHora" align="right"></td>
-                        <td width="28%" align="right">
-                            <%--<img id="IDLogoSSP" runat="server" src="~/Images/Cabecera/Cintillo_SSP.png" style="width:400px;"/></td>--%>
+                        <td width="28%" align="right">                            
                         <td width="2%"></td>
                     </tr>
-                    <%--<tr><td></td><td></td><td></td></tr>--%>
+                    
                 </table>
                 <div class="ClassAlto10"></div>
             </div>
@@ -106,7 +105,7 @@
                                                 <Items>
                                                     <asp:MenuItem NavigateUrl="~/Account/AdministraRolesUsuarios.aspx" Text="Admon. Usuarios" Value="Admon. Usuarios"></asp:MenuItem>
                                                     <asp:MenuItem NavigateUrl="~/Account/RegistroUsuario.aspx" Text="Agregar Usuario" Value="Agregar Usuario"></asp:MenuItem>
-                                                    <asp:MenuItem NavigateUrl="~/Account/frmLogout.aspx" Text="Salir" Value="Salir"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Account/FrmLogout.aspx" Text="Salir" Value="Salir"></asp:MenuItem>
                                                 </Items>
                                                 <StaticMenuItemStyle BackColor="#C4C6CA" ForeColor="#000" HorizontalPadding="20px" VerticalPadding="10px" />
                                                 <StaticHoverStyle BackColor="#666666" ForeColor="White" />
@@ -124,7 +123,7 @@
                                                 <Items>
                                                     <asp:MenuItem NavigateUrl="~/Consulta.aspx" Text="Consulta en histórico" Value="Consulta en histórico"></asp:MenuItem>
                                                     <asp:MenuItem NavigateUrl="~/ConsultaLicencias.aspx" Text="Consulta SIGELIC" Value="Consulta SIGELIC"></asp:MenuItem>
-                                                    <asp:MenuItem NavigateUrl="~/Account/frmLogout.aspx" Text="Salir" Value="Salir"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Account/FrmLogout.aspx" Text="Salir" Value="Salir"></asp:MenuItem>
                                                 </Items>
                                                 <StaticMenuItemStyle BackColor="#C4C6CA" ForeColor="#000" HorizontalPadding="20px" VerticalPadding="10px" />
                                                 <StaticHoverStyle BackColor="#666666" ForeColor="White" />
@@ -161,13 +160,7 @@
                             </section>
                         </div>
         </header>
-
-        <%--<div id="body">
-            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-            <section class="content-wrapper main-content clear-fix">
-                <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-            </section>
-        </div>--%>
+        
 
 
         <footer>

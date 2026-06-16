@@ -89,11 +89,11 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="HtmlAgilityPack, Version=1.12.3.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\HtmlAgilityPack.1.12.3\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="HtmlAgilityPack, Version=1.12.4.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.12.4\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=3.3.0.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.3.3.0\lib\net462\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=3.3.1.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.3.3.1\lib\net462\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
@@ -181,7 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\AdministraRolesUsuarios.aspx" />
-    <Content Include="Account\frmLogout.aspx" />
+    <Content Include="Account\FrmLogout.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Manage.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
@@ -191,7 +191,6 @@
     <Content Include="Account\reseteapassword.aspx" />
     <Content Include="Consulta.aspx" />
     <Content Include="ConsultaLicencias.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -280,6 +279,9 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Controles\ctrlCampoValido.ascx" />
+    <Content Include="Error401.aspx" />
+    <Content Include="Error404.aspx" />
+    <Content Include="Error500.aspx" />
     <Content Include="fonts\faw\css\all.css" />
     <Content Include="fonts\faw\css\all.min.css" />
     <Content Include="fonts\faw\css\brands.css" />
@@ -369,6 +371,7 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Documentacion\README.md" />
     <None Include="Properties\PublishProfiles\101.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\Zip.pubxml" />
@@ -512,12 +515,12 @@
     <Compile Include="Account\AdministraRolesUsuarios.aspx.designer.cs">
       <DependentUpon>AdministraRolesUsuarios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\frmLogout.aspx.cs">
-      <DependentUpon>frmLogout.aspx</DependentUpon>
+    <Compile Include="Account\FrmLogout.aspx.cs">
+      <DependentUpon>FrmLogout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\frmLogout.aspx.designer.cs">
-      <DependentUpon>frmLogout.aspx</DependentUpon>
+    <Compile Include="Account\FrmLogout.aspx.designer.cs">
+      <DependentUpon>FrmLogout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\RegistroUsuario.aspx.cs">
       <DependentUpon>RegistroUsuario.aspx</DependentUpon>
@@ -585,13 +588,6 @@
     <Compile Include="ConsultaLicencias.aspx.designer.cs">
       <DependentUpon>ConsultaLicencias.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Controles\ctrlCampoValido.ascx.cs">
       <DependentUpon>ctrlCampoValido.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -632,6 +628,27 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error401.aspx.cs">
+      <DependentUpon>Error401.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error401.aspx.designer.cs">
+      <DependentUpon>Error401.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error404.aspx.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error404.aspx.designer.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error500.aspx.cs">
+      <DependentUpon>Error500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error500.aspx.designer.cs">
+      <DependentUpon>Error500.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
