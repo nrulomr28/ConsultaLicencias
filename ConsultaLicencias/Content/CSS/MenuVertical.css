@@ -1,0 +1,20 @@
+﻿.ClassMenuVerticalCuerpo
+{
+    position: fixed;
+    top: 390px;
+    left: 20px;
+    border: 1px solid #B6B6B6;
+    border-radius: 30px;
+    background-color: #F8F8F8;
+    z-index: 1;
+}
+.ClassMenuVerticalMargen { padding: 15px 5px 15px 5px; }
+.ClassMenuVertical
+{
+    border: 2px solid #0363B9;
+    width: 28px;
+    height: 28px;
+    background-color: #057FC2;
+    border-radius: 28px;
+}
+.ClassMenuVertical:hover { background-color: #036DA7; }

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="ConsultaLicencias" />
+  <setParameter name="DefaultConnection-Web.config Connection String" value="Data Source=10.8.3.115;initial catalog=DBConcesiones;persist security info=True;user id=usrConcesiones;password=K0n*C33;Connect Timeout=200" />
+  <setParameter name="SILCVEREntities-Web.config Connection String" value="metadata=res://*/ModeloLicencias.csdl|res://*/ModeloLicencias.ssdl|res://*/ModeloLicencias.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=10.8.3.115;initial catalog=SILCVER;user id=usrLicenciasBUS;password=SRVBus2015;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
+</parameters>

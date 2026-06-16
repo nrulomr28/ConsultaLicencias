@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c96dfc7657c34d71946d9e62e9fc3939" Name="Diagram1" ZoomLevel="54">
+        <EntityTypeShape EntityType="SILCVERModel.C_PERSONA" Width="1.5" PointX="0.75" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SILCVERModel.C_PERSONA_DOC" Width="2.25" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SILCVERModel.C_PERSONA_HUELLAS" Width="3.875" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SILCVERModel.C_PERSONA_IMG" Width="2.25" PointX="3" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="SILCVERModel.R_133" ManuallyRouted="false" />
+        <AssociationConnector Association="SILCVERModel.R_134" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SILCVERModel.C_COLONIA" Width="1.875" PointX="5.875" PointY="11.25" />
+        <EntityTypeShape EntityType="SILCVERModel.C_DELEG_MUNICIPIO" Width="2.25" PointX="8.125" PointY="11.25" />
+        <EntityTypeShape EntityType="SILCVERModel.C_ESTADO_CIVIL" Width="1.875" PointX="3.625" PointY="14.5" />
+        <EntityTypeShape EntityType="SILCVERModel.C_PROFESION" Width="1.5" PointX="0.5" PointY="14.875" />
+        <EntityTypeShape EntityType="SILCVERModel.C_RESTRICCIONES_FISICAS" Width="2.25" PointX="2.75" PointY="12.375" />
+        <AssociationConnector Association="SILCVERModel.R_32" />
+        <AssociationConnector Association="SILCVERModel.R_93" />
+        <AssociationConnector Association="SILCVERModel.R_95" />
+        <AssociationConnector Association="SILCVERModel.FK_C_PERSONA_C_PROFESION" />
+        <AssociationConnector Association="SILCVERModel.FK_C_PERSONA_C_RESTRICCIONES_FISICAS" />
+        <EntityTypeShape EntityType="SILCVERModel.vLicencias_NEW" Width="1.5" PointX="12.125" PointY="0.75" />
+        <EntityTypeShape EntityType="SILCVERModel.vLicencias_UNION" Width="1.5" PointX="14.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SILCVERModel.vLicencias_Imagen_New" Width="1.5" PointX="19.375" PointY="3.25" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

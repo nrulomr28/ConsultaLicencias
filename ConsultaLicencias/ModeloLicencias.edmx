@@ -1,0 +1,1252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SILCVERModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="C_COLONIA">
+          <Key>
+            <PropertyRef Name="ID_COLONIA" />
+            <PropertyRef Name="ID_DELEG_MUNICIPIO" />
+            <PropertyRef Name="ID_ESTADO" />
+          </Key>
+          <Property Name="ID_COLONIA" Type="int" Nullable="false" />
+          <Property Name="DSC_COLONIA" Type="varchar" MaxLength="100" />
+          <Property Name="ID_DELEG_MUNICIPIO" Type="int" Nullable="false" />
+          <Property Name="ID_ESTADO" Type="int" Nullable="false" />
+          <Property Name="NUM_CP" Type="varchar" MaxLength="5" />
+          <Property Name="ZZ_MIGRA_IP104040" Type="int" />
+        </EntityType>
+        <EntityType Name="C_DELEG_MUNICIPIO">
+          <Key>
+            <PropertyRef Name="ID_DELEG_MUNICIPIO" />
+            <PropertyRef Name="ID_ESTADO" />
+          </Key>
+          <Property Name="ID_DELEG_MUNICIPIO" Type="int" Nullable="false" />
+          <Property Name="DSC_DELEG_MUNICIPIO" Type="varchar" MaxLength="100" />
+          <Property Name="ID_ESTADO" Type="int" Nullable="false" />
+          <Property Name="ID_C4" Type="int" />
+          <Property Name="ZZ_MIGRA_IP104040" Type="int" />
+        </EntityType>
+        <EntityType Name="C_ESTADO_CIVIL">
+          <Key>
+            <PropertyRef Name="ID_ESTADO_CIVIL" />
+          </Key>
+          <Property Name="ID_ESTADO_CIVIL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DSC_ESTADO_CIVIL" Type="varchar" MaxLength="50" />
+          <Property Name="ID_ESTATUS" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="C_PERSONA">
+          <Key>
+            <PropertyRef Name="ID_PERSONA" />
+          </Key>
+          <Property Name="ID_PERSONA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PER_NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="PER_APELLIDO_PATERNO" Type="varchar" MaxLength="50" />
+          <Property Name="PER_APELLIDO_MATERNO" Type="varchar" MaxLength="50" />
+          <Property Name="PER_FCH_NACIMIENTO" Type="datetime" />
+          <Property Name="PER_RFC" Type="varchar" MaxLength="20" />
+          <Property Name="PER_CURP" Type="varchar" MaxLength="18" />
+          <Property Name="PER_DOM_CALLE" Type="varchar" MaxLength="100" />
+          <Property Name="PER_DOM_NUM_EXT" Type="varchar" MaxLength="20" />
+          <Property Name="PER_DOM_NUM_INT" Type="varchar" MaxLength="20" />
+          <Property Name="PER_DOM_REF_ADIC" Type="varchar" MaxLength="100" />
+          <Property Name="PER_DOM_CP" Type="varchar" MaxLength="20" />
+          <Property Name="ID_COLONIA" Type="int" />
+          <Property Name="ID_DELEG_MUNICIPIO" Type="int" />
+          <Property Name="ID_ESTADO" Type="int" />
+          <Property Name="ID_SEXO" Type="int" />
+          <Property Name="ID_ESTADO_CIVIL" Type="int" />
+          <Property Name="PER_IFE" Type="varchar" MaxLength="20" />
+          <Property Name="ID_NACIONALIDAD" Type="int" />
+          <Property Name="ID_TIPO_SANGRE" Type="int" />
+          <Property Name="ID_INSTITUCION" Type="int" />
+          <Property Name="PER_TELEFONO" Type="varchar" MaxLength="20" />
+          <Property Name="PER_NOTAS" Type="varchar" MaxLength="255" />
+          <Property Name="ID_ENTIDAD_NACIMIENTO" Type="int" />
+          <Property Name="PER_DOM_CP_SEPOMEX" Type="varchar" MaxLength="20" />
+          <Property Name="PER_CURP_CORRECTO" Type="bit" />
+          <Property Name="PER_RFC_CORRECTO" Type="bit" />
+          <Property Name="PER_IFE_CORRECTO" Type="bit" />
+          <Property Name="PER_CORREO" Type="varchar" MaxLength="60" />
+          <Property Name="ID_TIPO_TELEFONO" Type="int" />
+          <Property Name="PER_TELEFONO_LADA" Type="varchar" MaxLength="3" />
+          <Property Name="FCH_CREACION" Type="datetime" />
+          <Property Name="DATOS_VALIDADOS" Type="bit" />
+          <Property Name="ID_D_CURSO" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_PROFESION" Type="int" />
+          <Property Name="ID_PAIS_NACIMIENTO" Type="int" />
+          <Property Name="DONA_ORGANOS" Type="bit" />
+          <Property Name="ID_RESTRICCIONES_FISICAS" Type="int" />
+          <Property Name="ID_BOCA" Type="int" />
+          <Property Name="ID_CABELLO" Type="int" />
+          <Property Name="ID_CARA" Type="int" />
+          <Property Name="ID_COMPLEXION" Type="int" />
+          <Property Name="ID_NARIZ" Type="int" />
+          <Property Name="ID_OJOS" Type="int" />
+          <Property Name="ID_PIEL" Type="int" />
+          <Property Name="PER_ESTATURA" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PER_SENAS_PART" Type="varchar" MaxLength="100" />
+          <Property Name="TUT_APELLIDO_PATERNO" Type="varchar" MaxLength="50" />
+          <Property Name="TUT_APELLIDO_MATERNO" Type="varchar" MaxLength="50" />
+          <Property Name="TUT_NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="ora_modif_MvCrdl_prsIgu1" Type="int" />
+          <Property Name="ora_modif_MvCrdl_i1" Type="bit" />
+          <Property Name="ora_modif_MvCrdl_prsMig1" Type="int" />
+          <Property Name="ora_modif_MvCrdl_FchAct" Type="datetime" />
+          <Property Name="ora_modif_MvCrdl_FchHis" Type="datetime" />
+          <Property Name="ora_modif_MvCrdl_SeSusti" Type="bit" />
+          <Property Name="ZZ_MIGRA_IP104040" Type="int" />
+          <Property Name="PER_PESO" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="C_PERSONA_DOC">
+          <Key>
+            <PropertyRef Name="ID_PERSONA" />
+            <PropertyRef Name="ID_TIPO_DOCUMENTO" />
+          </Key>
+          <Property Name="ID_PERSONA" Type="int" Nullable="false" />
+          <Property Name="ID_TIPO_DOCUMENTO" Type="int" Nullable="false" />
+          <Property Name="DOC_IMAGEN" Type="image" />
+          <Property Name="ID_USUARIO" Type="int" />
+          <Property Name="FEC_CREACION" Type="datetime" />
+          <Property Name="ora_modif_docper_i" Type="bit" />
+          <Property Name="ora_modif_clvdcmprs_ref" Type="int" />
+          <Property Name="ZZ_MIGRA_IP104040" Type="int" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SILCVER.dbo.C_PERSONA_HUELLAS' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="C_PERSONA_HUELLAS">
+          <Key>
+            <PropertyRef Name="CONTROL_HUELLAS" />
+            <PropertyRef Name="ID_PERSONA" />
+          </Key>
+          <Property Name="CONTROL_HUELLAS" Type="int" Nullable="false" />
+          <Property Name="HUELLA_DER1_PK" Type="image" />
+          <Property Name="HUELLA_DER2_PK" Type="image" />
+          <Property Name="HUELLA_DER3_PK" Type="image" />
+          <Property Name="HUELLA_DER4_PK" Type="image" />
+          <Property Name="HUELLA_DER5_PK" Type="image" />
+          <Property Name="HUELLA_IZQ1_PK" Type="image" />
+          <Property Name="HUELLA_IZQ2_PK" Type="image" />
+          <Property Name="HUELLA_IZQ3_PK" Type="image" />
+          <Property Name="HUELLA_IZQ4_PK" Type="image" />
+          <Property Name="HUELLA_IZQ5_PK" Type="image" />
+          <Property Name="HUELLA_DER1_WSQ" Type="image" />
+          <Property Name="HUELLA_DER2_WSQ" Type="image" />
+          <Property Name="HUELLA_DER3_WSQ" Type="image" />
+          <Property Name="HUELLA_DER4_WSQ" Type="image" />
+          <Property Name="HUELLA_DER5_WSQ" Type="image" />
+          <Property Name="HUELLA_IZQ1_WSQ" Type="image" />
+          <Property Name="HUELLA_IZQ2_WSQ" Type="image" />
+          <Property Name="HUELLA_IZQ3_WSQ" Type="image" />
+          <Property Name="HUELLA_IZQ4_WSQ" Type="image" />
+          <Property Name="HUELLA_IZQ5_WSQ" Type="image" />
+          <Property Name="HUELLA_SLAP1_WSQ" Type="image" />
+          <Property Name="HUELLA_SLAP2_WSQ" Type="image" />
+          <Property Name="HUELLA_SLAP3_WSQ" Type="image" />
+          <Property Name="HUELLA_DER1_ESTATUS" Type="bit" />
+          <Property Name="HUELLA_DER2_ESTATUS" Type="bit" />
+          <Property Name="HUELLA_DER3_ESTATUS" Type="bit" />
+          <Property Name="HUELLA_DER4_ESTATUS" Type="bit" />
+          <Property Name="HUELLA_DER5_ESTATUS" Type="bit" />
+          <Property Name="HUELLA_IZQ1_ESTATUS" Type="bit" />
+          <Property Name="HUELLA_IZQ2_ESTATUS" Type="bit" />
+          <Property Name="HUELLA_IZQ3_ESTATUS" Type="bit" />
+          <Property Name="HUELLA_IZQ4_ESTATUS" Type="bit" />
+          <Property Name="HUELLA_IZQ5_ESTATUS" Type="bit" />
+          <Property Name="ora_modif_wsq_u1" Type="bit" />
+          <Property Name="ora_modif_wsq_u2" Type="bit" />
+          <Property Name="ora_modif_wsq_u3" Type="bit" />
+          <Property Name="ora_modif_wsq_i1" Type="bit" />
+          <Property Name="ora_modif_pk_u1" Type="bit" />
+          <Property Name="ora_modif_pk_u2" Type="bit" />
+          <Property Name="ora_modif_pk_u3" Type="bit" />
+          <Property Name="ora_modif_pk_i1" Type="bit" />
+          <Property Name="ora_modif_status_der" Type="bit" />
+          <Property Name="ora_modif_status_izq" Type="bit" />
+          <Property Name="ZZ_MIGRA_IP104040" Type="int" />
+          <Property Name="ID_PERSONA" Type="int" Nullable="false" />
+          <Property Name="FG" Type="nvarchar" MaxLength="34" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SILCVER.dbo.C_PERSONA_IMG' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="C_PERSONA_IMG">
+          <Key>
+            <PropertyRef Name="CONTROL_IMG" />
+            <PropertyRef Name="ID_TIPO_LICENCIA" />
+            <PropertyRef Name="ID_PERSONA" />
+          </Key>
+          <Property Name="CONTROL_IMG" Type="int" Nullable="false" />
+          <Property Name="ID_TIPO_LICENCIA" Type="int" Nullable="false" />
+          <Property Name="IMG_FOTO" Type="image" />
+          <Property Name="IMG_FOTO_CAMEO" Type="image" />
+          <Property Name="IMG_FOTO_GHOST" Type="image" />
+          <Property Name="IMG_FIRMA" Type="image" />
+          <Property Name="ID_USUARIO" Type="int" />
+          <Property Name="FEC_CREACION" Type="datetime" />
+          <Property Name="ora_modif_foto_u" Type="bit" />
+          <Property Name="ora_modif_firma_u" Type="bit" />
+          <Property Name="ora_modif_fyf_i" Type="bit" />
+          <Property Name="ZZ_MIGRA_IP104040" Type="int" />
+          <Property Name="ID_PERSONA" Type="int" Nullable="false" />
+          <Property Name="FG" Type="nvarchar" MaxLength="34" />
+        </EntityType>
+        <EntityType Name="C_PROFESION">
+          <Key>
+            <PropertyRef Name="ID_PROFESION" />
+          </Key>
+          <Property Name="ID_PROFESION" Type="int" Nullable="false" />
+          <Property Name="DSC_PROFESION" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="C_RESTRICCIONES_FISICAS">
+          <Key>
+            <PropertyRef Name="ID_RESTRICCIONES_FISICAS" />
+          </Key>
+          <Property Name="ID_RESTRICCIONES_FISICAS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DSC_RESTRICCIONES_FISICAS" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SILCVER.dbo.vLicencias_Imagen_New' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="vLicencias_Imagen_New">
+          <Key>
+            <PropertyRef Name="ID_ALTERNA" />
+            <PropertyRef Name="ID_TIPO_IMAGEN" />
+            <PropertyRef Name="NO_LICENCI" />
+          </Key>
+          <Property Name="ID_ALTERNA" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="ID_TIPO_IMAGEN" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="ENTIDAD_ID" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="DELEGACION" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="NO_LICENCI" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Expedicion" Type="datetime" />
+          <Property Name="VENCIMIENT" Type="datetime" />
+          <Property Name="OFIEXP" Type="varchar" MaxLength="50" />
+          <Property Name="IMAGENKEY" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="IMAGEN" Type="varbinary(max)" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SILCVER.dbo.vLicencias_NEW' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="vLicencias_NEW">
+          <Key>
+            <PropertyRef Name="ID_ALTERNA" />
+            <PropertyRef Name="SEXO" />
+            <PropertyRef Name="TIPO_DE_LIC" />
+            <PropertyRef Name="PERIODO" />
+            <PropertyRef Name="ENTIDAD_ID" />
+            <PropertyRef Name="SANGRE" />
+            <PropertyRef Name="NOMBRECOND" />
+            <PropertyRef Name="APELLIDOPA" />
+            <PropertyRef Name="APELLIDOMA" />
+            <PropertyRef Name="CURP" />
+            <PropertyRef Name="RFC" />
+          </Key>
+          <Property Name="ID_ALTERNA" Type="int" Nullable="false" />
+          <Property Name="SEXO" Type="tinyint" Nullable="false" />
+          <Property Name="EXPEDICION" Type="nvarchar" MaxLength="4000" />
+          <Property Name="VENCIMIENT" Type="nvarchar" MaxLength="4000" />
+          <Property Name="TIPO_DE_LIC" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NO_LICENCI" Type="varchar(max)" />
+          <Property Name="PERIODO" Type="smallint" Nullable="false" />
+          <Property Name="OFIEXP" Type="varchar" MaxLength="50" />
+          <Property Name="ENTIDAD_ID" Type="int" Nullable="false" />
+          <Property Name="DELEGACION" Type="smallint" />
+          <Property Name="SANGRE" Type="int" Nullable="false" />
+          <Property Name="RESTRICCION" Type="varchar" MaxLength="50" />
+          <Property Name="NOMBRECOND" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="APELLIDOPA" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="APELLIDOMA" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="FECHANACIM" Type="date" />
+          <Property Name="CURP" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="RFC" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NACIONALIDAD" Type="smallint" />
+          <Property Name="ENTIDAD_CONDUCTOR" Type="smallint" />
+          <Property Name="MUN_ID" Type="smallint" />
+          <Property Name="MUNICIPIO" Type="nvarchar" MaxLength="50" />
+          <Property Name="CALLE" Type="varchar" MaxLength="150" />
+          <Property Name="COLONIA" Type="nvarchar" MaxLength="80" />
+          <Property Name="CODPOSTAL" Type="nvarchar" MaxLength="5" />
+          <Property Name="TELEFONO" Type="nvarchar" MaxLength="20" />
+          <Property Name="Height" Type="smallint" />
+          <Property Name="Weight" Type="smallint" />
+          <Property Name="EnrollmentTime" Type="datetime" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SILCVER.dbo.vLicencias_UNION' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="vLicencias_UNION">
+          <Key>
+            <PropertyRef Name="ID_ALTERNA" />
+            <PropertyRef Name="ESTATUS_REGISTRO" />
+          </Key>
+          <Property Name="ID_ALTERNA" Type="int" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="APELLIDO_PATERNO" Type="varchar" MaxLength="50" />
+          <Property Name="APELLIDO_MATERNO" Type="varchar" MaxLength="50" />
+          <Property Name="FCH_NACIMIENTO" Type="datetime" />
+          <Property Name="RFC" Type="varchar" MaxLength="20" />
+          <Property Name="CURP" Type="varchar" MaxLength="20" />
+          <Property Name="FECHA_REGISTRO" Type="datetime" />
+          <Property Name="ESTATUS_REGISTRO" Type="int" Nullable="false" />
+          <Property Name="Busqueda" Type="varchar" MaxLength="171" />
+        </EntityType>
+        <Association Name="FK_C_PERSONA_C_PROFESION">
+          <End Role="C_PROFESION" Type="Self.C_PROFESION" Multiplicity="0..1" />
+          <End Role="C_PERSONA" Type="Self.C_PERSONA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_PROFESION">
+              <PropertyRef Name="ID_PROFESION" />
+            </Principal>
+            <Dependent Role="C_PERSONA">
+              <PropertyRef Name="ID_PROFESION" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_C_PERSONA_C_RESTRICCIONES_FISICAS">
+          <End Role="C_RESTRICCIONES_FISICAS" Type="Self.C_RESTRICCIONES_FISICAS" Multiplicity="0..1" />
+          <End Role="C_PERSONA" Type="Self.C_PERSONA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_RESTRICCIONES_FISICAS">
+              <PropertyRef Name="ID_RESTRICCIONES_FISICAS" />
+            </Principal>
+            <Dependent Role="C_PERSONA">
+              <PropertyRef Name="ID_RESTRICCIONES_FISICAS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="R_134">
+          <End Role="C_PERSONA" Type="Self.C_PERSONA" Multiplicity="1" />
+          <End Role="C_PERSONA_DOC" Type="Self.C_PERSONA_DOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_PERSONA">
+              <PropertyRef Name="ID_PERSONA" />
+            </Principal>
+            <Dependent Role="C_PERSONA_DOC">
+              <PropertyRef Name="ID_PERSONA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="R_32">
+          <End Role="C_DELEG_MUNICIPIO" Type="Self.C_DELEG_MUNICIPIO" Multiplicity="1" />
+          <End Role="C_COLONIA" Type="Self.C_COLONIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_DELEG_MUNICIPIO">
+              <PropertyRef Name="ID_DELEG_MUNICIPIO" />
+              <PropertyRef Name="ID_ESTADO" />
+            </Principal>
+            <Dependent Role="C_COLONIA">
+              <PropertyRef Name="ID_DELEG_MUNICIPIO" />
+              <PropertyRef Name="ID_ESTADO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="R_93">
+          <End Role="C_COLONIA" Type="Self.C_COLONIA" Multiplicity="0..1" />
+          <End Role="C_PERSONA" Type="Self.C_PERSONA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_COLONIA">
+              <PropertyRef Name="ID_COLONIA" />
+              <PropertyRef Name="ID_DELEG_MUNICIPIO" />
+              <PropertyRef Name="ID_ESTADO" />
+            </Principal>
+            <Dependent Role="C_PERSONA">
+              <PropertyRef Name="ID_COLONIA" />
+              <PropertyRef Name="ID_DELEG_MUNICIPIO" />
+              <PropertyRef Name="ID_ESTADO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="R_95">
+          <End Role="C_ESTADO_CIVIL" Type="Self.C_ESTADO_CIVIL" Multiplicity="0..1" />
+          <End Role="C_PERSONA" Type="Self.C_PERSONA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_ESTADO_CIVIL">
+              <PropertyRef Name="ID_ESTADO_CIVIL" />
+            </Principal>
+            <Dependent Role="C_PERSONA">
+              <PropertyRef Name="ID_ESTADO_CIVIL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SILCVERModelStoreContainer">
+          <EntitySet Name="C_COLONIA" EntityType="Self.C_COLONIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_DELEG_MUNICIPIO" EntityType="Self.C_DELEG_MUNICIPIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_ESTADO_CIVIL" EntityType="Self.C_ESTADO_CIVIL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_PERSONA" EntityType="Self.C_PERSONA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_PERSONA_DOC" EntityType="Self.C_PERSONA_DOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_PROFESION" EntityType="Self.C_PROFESION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_RESTRICCIONES_FISICAS" EntityType="Self.C_RESTRICCIONES_FISICAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C_PERSONA_HUELLAS" EntityType="Self.C_PERSONA_HUELLAS" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[C_PERSONA_HUELLAS].[CONTROL_HUELLAS] AS [CONTROL_HUELLAS], 
+[C_PERSONA_HUELLAS].[HUELLA_DER1_PK] AS [HUELLA_DER1_PK], 
+[C_PERSONA_HUELLAS].[HUELLA_DER2_PK] AS [HUELLA_DER2_PK], 
+[C_PERSONA_HUELLAS].[HUELLA_DER3_PK] AS [HUELLA_DER3_PK], 
+[C_PERSONA_HUELLAS].[HUELLA_DER4_PK] AS [HUELLA_DER4_PK], 
+[C_PERSONA_HUELLAS].[HUELLA_DER5_PK] AS [HUELLA_DER5_PK], 
+[C_PERSONA_HUELLAS].[HUELLA_IZQ1_PK] AS [HUELLA_IZQ1_PK], 
+[C_PERSONA_HUELLAS].[HUELLA_IZQ2_PK] AS [HUELLA_IZQ2_PK], 
+[C_PERSONA_HUELLAS].[HUELLA_IZQ3_PK] AS [HUELLA_IZQ3_PK], 
+[C_PERSONA_HUELLAS].[HUELLA_IZQ4_PK] AS [HUELLA_IZQ4_PK], 
+[C_PERSONA_HUELLAS].[HUELLA_IZQ5_PK] AS [HUELLA_IZQ5_PK], 
+[C_PERSONA_HUELLAS].[HUELLA_DER1_WSQ] AS [HUELLA_DER1_WSQ], 
+[C_PERSONA_HUELLAS].[HUELLA_DER2_WSQ] AS [HUELLA_DER2_WSQ], 
+[C_PERSONA_HUELLAS].[HUELLA_DER3_WSQ] AS [HUELLA_DER3_WSQ], 
+[C_PERSONA_HUELLAS].[HUELLA_DER4_WSQ] AS [HUELLA_DER4_WSQ], 
+[C_PERSONA_HUELLAS].[HUELLA_DER5_WSQ] AS [HUELLA_DER5_WSQ], 
+[C_PERSONA_HUELLAS].[HUELLA_IZQ1_WSQ] AS [HUELLA_IZQ1_WSQ], 
+[C_PERSONA_HUELLAS].[HUELLA_IZQ2_WSQ] AS [HUELLA_IZQ2_WSQ], 
+[C_PERSONA_HUELLAS].[HUELLA_IZQ3_WSQ] AS [HUELLA_IZQ3_WSQ], 
+[C_PERSONA_HUELLAS].[HUELLA_IZQ4_WSQ] AS [HUELLA_IZQ4_WSQ], 
+[C_PERSONA_HUELLAS].[HUELLA_IZQ5_WSQ] AS [HUELLA_IZQ5_WSQ], 
+[C_PERSONA_HUELLAS].[HUELLA_SLAP1_WSQ] AS [HUELLA_SLAP1_WSQ], 
+[C_PERSONA_HUELLAS].[HUELLA_SLAP2_WSQ] AS [HUELLA_SLAP2_WSQ], 
+[C_PERSONA_HUELLAS].[HUELLA_SLAP3_WSQ] AS [HUELLA_SLAP3_WSQ], 
+[C_PERSONA_HUELLAS].[HUELLA_DER1_ESTATUS] AS [HUELLA_DER1_ESTATUS], 
+[C_PERSONA_HUELLAS].[HUELLA_DER2_ESTATUS] AS [HUELLA_DER2_ESTATUS], 
+[C_PERSONA_HUELLAS].[HUELLA_DER3_ESTATUS] AS [HUELLA_DER3_ESTATUS], 
+[C_PERSONA_HUELLAS].[HUELLA_DER4_ESTATUS] AS [HUELLA_DER4_ESTATUS], 
+[C_PERSONA_HUELLAS].[HUELLA_DER5_ESTATUS] AS [HUELLA_DER5_ESTATUS], 
+[C_PERSONA_HUELLAS].[HUELLA_IZQ1_ESTATUS] AS [HUELLA_IZQ1_ESTATUS], 
+[C_PERSONA_HUELLAS].[HUELLA_IZQ2_ESTATUS] AS [HUELLA_IZQ2_ESTATUS], 
+[C_PERSONA_HUELLAS].[HUELLA_IZQ3_ESTATUS] AS [HUELLA_IZQ3_ESTATUS], 
+[C_PERSONA_HUELLAS].[HUELLA_IZQ4_ESTATUS] AS [HUELLA_IZQ4_ESTATUS], 
+[C_PERSONA_HUELLAS].[HUELLA_IZQ5_ESTATUS] AS [HUELLA_IZQ5_ESTATUS], 
+[C_PERSONA_HUELLAS].[ora_modif_wsq_u1] AS [ora_modif_wsq_u1], 
+[C_PERSONA_HUELLAS].[ora_modif_wsq_u2] AS [ora_modif_wsq_u2], 
+[C_PERSONA_HUELLAS].[ora_modif_wsq_u3] AS [ora_modif_wsq_u3], 
+[C_PERSONA_HUELLAS].[ora_modif_wsq_i1] AS [ora_modif_wsq_i1], 
+[C_PERSONA_HUELLAS].[ora_modif_pk_u1] AS [ora_modif_pk_u1], 
+[C_PERSONA_HUELLAS].[ora_modif_pk_u2] AS [ora_modif_pk_u2], 
+[C_PERSONA_HUELLAS].[ora_modif_pk_u3] AS [ora_modif_pk_u3], 
+[C_PERSONA_HUELLAS].[ora_modif_pk_i1] AS [ora_modif_pk_i1], 
+[C_PERSONA_HUELLAS].[ora_modif_status_der] AS [ora_modif_status_der], 
+[C_PERSONA_HUELLAS].[ora_modif_status_izq] AS [ora_modif_status_izq], 
+[C_PERSONA_HUELLAS].[ZZ_MIGRA_IP104040] AS [ZZ_MIGRA_IP104040], 
+[C_PERSONA_HUELLAS].[ID_PERSONA] AS [ID_PERSONA], 
+[C_PERSONA_HUELLAS].[FG] AS [FG]
+FROM [dbo].[C_PERSONA_HUELLAS] AS [C_PERSONA_HUELLAS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="C_PERSONA_IMG" EntityType="Self.C_PERSONA_IMG" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[C_PERSONA_IMG].[CONTROL_IMG] AS [CONTROL_IMG], 
+[C_PERSONA_IMG].[ID_TIPO_LICENCIA] AS [ID_TIPO_LICENCIA], 
+[C_PERSONA_IMG].[IMG_FOTO] AS [IMG_FOTO], 
+[C_PERSONA_IMG].[IMG_FOTO_CAMEO] AS [IMG_FOTO_CAMEO], 
+[C_PERSONA_IMG].[IMG_FOTO_GHOST] AS [IMG_FOTO_GHOST], 
+[C_PERSONA_IMG].[IMG_FIRMA] AS [IMG_FIRMA], 
+[C_PERSONA_IMG].[ID_USUARIO] AS [ID_USUARIO], 
+[C_PERSONA_IMG].[FEC_CREACION] AS [FEC_CREACION], 
+[C_PERSONA_IMG].[ora_modif_foto_u] AS [ora_modif_foto_u], 
+[C_PERSONA_IMG].[ora_modif_firma_u] AS [ora_modif_firma_u], 
+[C_PERSONA_IMG].[ora_modif_fyf_i] AS [ora_modif_fyf_i], 
+[C_PERSONA_IMG].[ZZ_MIGRA_IP104040] AS [ZZ_MIGRA_IP104040], 
+[C_PERSONA_IMG].[ID_PERSONA] AS [ID_PERSONA], 
+[C_PERSONA_IMG].[FG] AS [FG]
+FROM [dbo].[C_PERSONA_IMG] AS [C_PERSONA_IMG]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vLicencias_Imagen_New" EntityType="Self.vLicencias_Imagen_New" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vLicencias_Imagen_New].[ID_ALTERNA] AS [ID_ALTERNA], 
+[vLicencias_Imagen_New].[ID_TIPO_IMAGEN] AS [ID_TIPO_IMAGEN], 
+[vLicencias_Imagen_New].[ENTIDAD_ID] AS [ENTIDAD_ID], 
+[vLicencias_Imagen_New].[DELEGACION] AS [DELEGACION], 
+[vLicencias_Imagen_New].[NO_LICENCI] AS [NO_LICENCI], 
+[vLicencias_Imagen_New].[Expedicion] AS [Expedicion], 
+[vLicencias_Imagen_New].[VENCIMIENT] AS [VENCIMIENT], 
+[vLicencias_Imagen_New].[OFIEXP] AS [OFIEXP], 
+[vLicencias_Imagen_New].[IMAGENKEY] AS [IMAGENKEY], 
+[vLicencias_Imagen_New].[IMAGEN] AS [IMAGEN]
+FROM [dbo].[vLicencias_Imagen_New] AS [vLicencias_Imagen_New]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vLicencias_NEW" EntityType="Self.vLicencias_NEW" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vLicencias_NEW].[ID_ALTERNA] AS [ID_ALTERNA], 
+[vLicencias_NEW].[SEXO] AS [SEXO], 
+[vLicencias_NEW].[EXPEDICION] AS [EXPEDICION], 
+[vLicencias_NEW].[VENCIMIENT] AS [VENCIMIENT], 
+[vLicencias_NEW].[TIPO_DE_LIC] AS [TIPO_DE_LIC], 
+[vLicencias_NEW].[NO_LICENCI] AS [NO_LICENCI], 
+[vLicencias_NEW].[PERIODO] AS [PERIODO], 
+[vLicencias_NEW].[OFIEXP] AS [OFIEXP], 
+[vLicencias_NEW].[ENTIDAD_ID] AS [ENTIDAD_ID], 
+[vLicencias_NEW].[DELEGACION] AS [DELEGACION], 
+[vLicencias_NEW].[SANGRE] AS [SANGRE], 
+[vLicencias_NEW].[RESTRICCION] AS [RESTRICCION], 
+[vLicencias_NEW].[NOMBRECOND] AS [NOMBRECOND], 
+[vLicencias_NEW].[APELLIDOPA] AS [APELLIDOPA], 
+[vLicencias_NEW].[APELLIDOMA] AS [APELLIDOMA], 
+[vLicencias_NEW].[FECHANACIM] AS [FECHANACIM], 
+[vLicencias_NEW].[CURP] AS [CURP], 
+[vLicencias_NEW].[RFC] AS [RFC], 
+[vLicencias_NEW].[NACIONALIDAD] AS [NACIONALIDAD], 
+[vLicencias_NEW].[ENTIDAD_CONDUCTOR] AS [ENTIDAD_CONDUCTOR], 
+[vLicencias_NEW].[MUN_ID] AS [MUN_ID], 
+[vLicencias_NEW].[MUNICIPIO] AS [MUNICIPIO], 
+[vLicencias_NEW].[CALLE] AS [CALLE], 
+[vLicencias_NEW].[COLONIA] AS [COLONIA], 
+[vLicencias_NEW].[CODPOSTAL] AS [CODPOSTAL], 
+[vLicencias_NEW].[TELEFONO] AS [TELEFONO], 
+[vLicencias_NEW].[Height] AS [Height], 
+[vLicencias_NEW].[Weight] AS [Weight], 
+[vLicencias_NEW].[EnrollmentTime] AS [EnrollmentTime]
+FROM [dbo].[vLicencias_NEW] AS [vLicencias_NEW]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vLicencias_UNION" EntityType="Self.vLicencias_UNION" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vLicencias_UNION].[ID_ALTERNA] AS [ID_ALTERNA], 
+[vLicencias_UNION].[NOMBRE] AS [NOMBRE], 
+[vLicencias_UNION].[APELLIDO_PATERNO] AS [APELLIDO_PATERNO], 
+[vLicencias_UNION].[APELLIDO_MATERNO] AS [APELLIDO_MATERNO], 
+[vLicencias_UNION].[FCH_NACIMIENTO] AS [FCH_NACIMIENTO], 
+[vLicencias_UNION].[RFC] AS [RFC], 
+[vLicencias_UNION].[CURP] AS [CURP], 
+[vLicencias_UNION].[FECHA_REGISTRO] AS [FECHA_REGISTRO], 
+[vLicencias_UNION].[ESTATUS_REGISTRO] AS [ESTATUS_REGISTRO], 
+[vLicencias_UNION].[Busqueda] AS [Busqueda]
+FROM [dbo].[vLicencias_UNION] AS [vLicencias_UNION]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_C_PERSONA_C_PROFESION" Association="Self.FK_C_PERSONA_C_PROFESION">
+            <End Role="C_PROFESION" EntitySet="C_PROFESION" />
+            <End Role="C_PERSONA" EntitySet="C_PERSONA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_C_PERSONA_C_RESTRICCIONES_FISICAS" Association="Self.FK_C_PERSONA_C_RESTRICCIONES_FISICAS">
+            <End Role="C_RESTRICCIONES_FISICAS" EntitySet="C_RESTRICCIONES_FISICAS" />
+            <End Role="C_PERSONA" EntitySet="C_PERSONA" />
+          </AssociationSet>
+          <AssociationSet Name="R_134" Association="Self.R_134">
+            <End Role="C_PERSONA" EntitySet="C_PERSONA" />
+            <End Role="C_PERSONA_DOC" EntitySet="C_PERSONA_DOC" />
+          </AssociationSet>
+          <AssociationSet Name="R_32" Association="Self.R_32">
+            <End Role="C_DELEG_MUNICIPIO" EntitySet="C_DELEG_MUNICIPIO" />
+            <End Role="C_COLONIA" EntitySet="C_COLONIA" />
+          </AssociationSet>
+          <AssociationSet Name="R_93" Association="Self.R_93">
+            <End Role="C_COLONIA" EntitySet="C_COLONIA" />
+            <End Role="C_PERSONA" EntitySet="C_PERSONA" />
+          </AssociationSet>
+          <AssociationSet Name="R_95" Association="Self.R_95">
+            <End Role="C_ESTADO_CIVIL" EntitySet="C_ESTADO_CIVIL" />
+            <End Role="C_PERSONA" EntitySet="C_PERSONA" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SILCVERModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SILCVEREntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="C_PERSONA" EntityType="SILCVERModel.C_PERSONA" />
+          <EntitySet Name="C_PERSONA_DOC" EntityType="SILCVERModel.C_PERSONA_DOC" />
+          <EntitySet Name="C_PERSONA_HUELLAS" EntityType="SILCVERModel.C_PERSONA_HUELLAS" />
+          <EntitySet Name="C_PERSONA_IMG" EntityType="SILCVERModel.C_PERSONA_IMG" />
+          <AssociationSet Name="R_133" Association="SILCVERModel.R_133">
+            <End Role="C_PERSONA" EntitySet="C_PERSONA" />
+            <End Role="C_PERSONA_IMG" EntitySet="C_PERSONA_IMG" />
+          </AssociationSet>
+          <AssociationSet Name="R_134" Association="SILCVERModel.R_134">
+            <End Role="C_PERSONA" EntitySet="C_PERSONA" />
+            <End Role="C_PERSONA_DOC" EntitySet="C_PERSONA_DOC" />
+          </AssociationSet>
+          <EntitySet Name="C_COLONIA" EntityType="SILCVERModel.C_COLONIA" />
+          <EntitySet Name="C_DELEG_MUNICIPIO" EntityType="SILCVERModel.C_DELEG_MUNICIPIO" />
+          <EntitySet Name="C_ESTADO_CIVIL" EntityType="SILCVERModel.C_ESTADO_CIVIL" />
+          <EntitySet Name="C_PROFESION" EntityType="SILCVERModel.C_PROFESION" />
+          <EntitySet Name="C_RESTRICCIONES_FISICAS" EntityType="SILCVERModel.C_RESTRICCIONES_FISICAS" />
+          <AssociationSet Name="R_32" Association="SILCVERModel.R_32">
+            <End Role="C_DELEG_MUNICIPIO" EntitySet="C_DELEG_MUNICIPIO" />
+            <End Role="C_COLONIA" EntitySet="C_COLONIA" />
+          </AssociationSet>
+          <AssociationSet Name="R_93" Association="SILCVERModel.R_93">
+            <End Role="C_COLONIA" EntitySet="C_COLONIA" />
+            <End Role="C_PERSONA" EntitySet="C_PERSONA" />
+          </AssociationSet>
+          <AssociationSet Name="R_95" Association="SILCVERModel.R_95">
+            <End Role="C_ESTADO_CIVIL" EntitySet="C_ESTADO_CIVIL" />
+            <End Role="C_PERSONA" EntitySet="C_PERSONA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_C_PERSONA_C_PROFESION" Association="SILCVERModel.FK_C_PERSONA_C_PROFESION">
+            <End Role="C_PROFESION" EntitySet="C_PROFESION" />
+            <End Role="C_PERSONA" EntitySet="C_PERSONA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_C_PERSONA_C_RESTRICCIONES_FISICAS" Association="SILCVERModel.FK_C_PERSONA_C_RESTRICCIONES_FISICAS">
+            <End Role="C_RESTRICCIONES_FISICAS" EntitySet="C_RESTRICCIONES_FISICAS" />
+            <End Role="C_PERSONA" EntitySet="C_PERSONA" />
+          </AssociationSet>
+          <EntitySet Name="vLicencias_NEW" EntityType="SILCVERModel.vLicencias_NEW" />
+          <EntitySet Name="vLicencias_Imagen_New" EntityType="SILCVERModel.vLicencias_Imagen_New" />
+          <EntitySet Name="vLicencias_UNION" EntityType="SILCVERModel.vLicencias_UNION" />
+        </EntityContainer>
+        <EntityType Name="C_PERSONA">
+          <Key>
+            <PropertyRef Name="ID_PERSONA" />
+          </Key>
+          <Property Name="ID_PERSONA" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PER_NOMBRE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PER_APELLIDO_PATERNO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PER_APELLIDO_MATERNO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PER_FCH_NACIMIENTO" Type="DateTime" Precision="3" />
+          <Property Name="PER_RFC" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PER_CURP" Type="String" MaxLength="18" Unicode="false" FixedLength="false" />
+          <Property Name="PER_DOM_CALLE" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="PER_DOM_NUM_EXT" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PER_DOM_NUM_INT" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PER_DOM_REF_ADIC" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="PER_DOM_CP" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ID_COLONIA" Type="Int32" />
+          <Property Name="ID_DELEG_MUNICIPIO" Type="Int32" />
+          <Property Name="ID_ESTADO" Type="Int32" />
+          <Property Name="ID_SEXO" Type="Int32" />
+          <Property Name="ID_ESTADO_CIVIL" Type="Int32" />
+          <Property Name="PER_IFE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ID_NACIONALIDAD" Type="Int32" />
+          <Property Name="ID_TIPO_SANGRE" Type="Int32" />
+          <Property Name="ID_INSTITUCION" Type="Int32" />
+          <Property Name="PER_TELEFONO" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PER_NOTAS" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ID_ENTIDAD_NACIMIENTO" Type="Int32" />
+          <Property Name="PER_DOM_CP_SEPOMEX" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PER_CURP_CORRECTO" Type="Boolean" />
+          <Property Name="PER_RFC_CORRECTO" Type="Boolean" />
+          <Property Name="PER_IFE_CORRECTO" Type="Boolean" />
+          <Property Name="PER_CORREO" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="ID_TIPO_TELEFONO" Type="Int32" />
+          <Property Name="PER_TELEFONO_LADA" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="FCH_CREACION" Type="DateTime" Precision="3" />
+          <Property Name="DATOS_VALIDADOS" Type="Boolean" />
+          <Property Name="ID_D_CURSO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ID_PROFESION" Type="Int32" />
+          <Property Name="ID_PAIS_NACIMIENTO" Type="Int32" />
+          <Property Name="DONA_ORGANOS" Type="Boolean" />
+          <Property Name="ID_RESTRICCIONES_FISICAS" Type="Int32" />
+          <Property Name="ID_BOCA" Type="Int32" />
+          <Property Name="ID_CABELLO" Type="Int32" />
+          <Property Name="ID_CARA" Type="Int32" />
+          <Property Name="ID_COMPLEXION" Type="Int32" />
+          <Property Name="ID_NARIZ" Type="Int32" />
+          <Property Name="ID_OJOS" Type="Int32" />
+          <Property Name="ID_PIEL" Type="Int32" />
+          <Property Name="PER_ESTATURA" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PER_SENAS_PART" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TUT_APELLIDO_PATERNO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TUT_APELLIDO_MATERNO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TUT_NOMBRE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ora_modif_MvCrdl_prsIgu1" Type="Int32" />
+          <Property Name="ora_modif_MvCrdl_i1" Type="Boolean" />
+          <Property Name="ora_modif_MvCrdl_prsMig1" Type="Int32" />
+          <Property Name="ora_modif_MvCrdl_FchAct" Type="DateTime" Precision="3" />
+          <Property Name="ora_modif_MvCrdl_FchHis" Type="DateTime" Precision="3" />
+          <Property Name="ora_modif_MvCrdl_SeSusti" Type="Boolean" />
+          <NavigationProperty Name="C_PERSONA_IMG" Relationship="SILCVERModel.R_133" FromRole="C_PERSONA" ToRole="C_PERSONA_IMG" />
+          <NavigationProperty Name="C_PERSONA_DOC" Relationship="SILCVERModel.R_134" FromRole="C_PERSONA" ToRole="C_PERSONA_DOC" />
+          <NavigationProperty Name="C_COLONIA" Relationship="SILCVERModel.R_93" FromRole="C_PERSONA" ToRole="C_COLONIA" />
+          <NavigationProperty Name="C_ESTADO_CIVIL" Relationship="SILCVERModel.R_95" FromRole="C_PERSONA" ToRole="C_ESTADO_CIVIL" />
+          <NavigationProperty Name="C_PROFESION" Relationship="SILCVERModel.FK_C_PERSONA_C_PROFESION" FromRole="C_PERSONA" ToRole="C_PROFESION" />
+          <NavigationProperty Name="C_RESTRICCIONES_FISICAS" Relationship="SILCVERModel.FK_C_PERSONA_C_RESTRICCIONES_FISICAS" FromRole="C_PERSONA" ToRole="C_RESTRICCIONES_FISICAS" />
+          <Property Name="ZZ_MIGRA_IP104040" Type="Int32" />
+          <Property Name="PER_PESO" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="C_PERSONA_DOC">
+          <Key>
+            <PropertyRef Name="ID_PERSONA" />
+            <PropertyRef Name="ID_TIPO_DOCUMENTO" />
+          </Key>
+          <Property Name="ID_PERSONA" Type="Int32" Nullable="false" />
+          <Property Name="ID_TIPO_DOCUMENTO" Type="Int32" Nullable="false" />
+          <Property Name="DOC_IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ID_USUARIO" Type="Int32" />
+          <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
+          <Property Name="ora_modif_docper_i" Type="Boolean" />
+          <Property Name="ora_modif_clvdcmprs_ref" Type="Int32" />
+          <NavigationProperty Name="C_PERSONA" Relationship="SILCVERModel.R_134" FromRole="C_PERSONA_DOC" ToRole="C_PERSONA" />
+          <Property Name="ZZ_MIGRA_IP104040" Type="Int32" />
+        </EntityType>
+        <EntityType Name="C_PERSONA_HUELLAS">
+          <Key>
+            <PropertyRef Name="ID_PERSONA" />
+            <PropertyRef Name="CONTROL_HUELLAS" />
+          </Key>
+          <Property Name="ID_PERSONA" Type="Int32" Nullable="false" />
+          <Property Name="HUELLA_DER1_PK" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_DER2_PK" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_DER3_PK" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_DER4_PK" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_DER5_PK" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_IZQ1_PK" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_IZQ2_PK" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_IZQ3_PK" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_IZQ4_PK" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_IZQ5_PK" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_DER1_WSQ" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_DER2_WSQ" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_DER3_WSQ" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_DER4_WSQ" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_DER5_WSQ" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_IZQ1_WSQ" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_IZQ2_WSQ" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_IZQ3_WSQ" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_IZQ4_WSQ" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_IZQ5_WSQ" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_SLAP1_WSQ" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_SLAP2_WSQ" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_SLAP3_WSQ" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="HUELLA_DER1_ESTATUS" Type="Boolean" />
+          <Property Name="HUELLA_DER2_ESTATUS" Type="Boolean" />
+          <Property Name="HUELLA_DER3_ESTATUS" Type="Boolean" />
+          <Property Name="HUELLA_DER4_ESTATUS" Type="Boolean" />
+          <Property Name="HUELLA_DER5_ESTATUS" Type="Boolean" />
+          <Property Name="HUELLA_IZQ1_ESTATUS" Type="Boolean" />
+          <Property Name="HUELLA_IZQ2_ESTATUS" Type="Boolean" />
+          <Property Name="HUELLA_IZQ3_ESTATUS" Type="Boolean" />
+          <Property Name="HUELLA_IZQ4_ESTATUS" Type="Boolean" />
+          <Property Name="HUELLA_IZQ5_ESTATUS" Type="Boolean" />
+          <Property Name="ora_modif_wsq_u1" Type="Boolean" />
+          <Property Name="ora_modif_wsq_u2" Type="Boolean" />
+          <Property Name="ora_modif_wsq_u3" Type="Boolean" />
+          <Property Name="ora_modif_wsq_i1" Type="Boolean" />
+          <Property Name="ora_modif_pk_u1" Type="Boolean" />
+          <Property Name="ora_modif_pk_u2" Type="Boolean" />
+          <Property Name="ora_modif_pk_u3" Type="Boolean" />
+          <Property Name="ora_modif_pk_i1" Type="Boolean" />
+          <Property Name="ora_modif_status_der" Type="Boolean" />
+          <Property Name="ora_modif_status_izq" Type="Boolean" />
+          <Property Name="CONTROL_HUELLAS" Type="Int32" Nullable="false" />
+          <Property Name="ZZ_MIGRA_IP104040" Type="Int32" />
+          <Property Name="FG" Type="String" MaxLength="34" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C_PERSONA_IMG">
+          <Key>
+            <PropertyRef Name="ID_PERSONA" />
+            <PropertyRef Name="ID_TIPO_LICENCIA" />
+            <PropertyRef Name="CONTROL_IMG" />
+          </Key>
+          <Property Name="ID_PERSONA" Type="Int32" Nullable="false" />
+          <Property Name="ID_TIPO_LICENCIA" Type="Int32" Nullable="false" />
+          <Property Name="IMG_FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="IMG_FOTO_CAMEO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="IMG_FOTO_GHOST" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="IMG_FIRMA" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ID_USUARIO" Type="Int32" />
+          <Property Name="FEC_CREACION" Type="DateTime" Precision="3" />
+          <Property Name="ora_modif_foto_u" Type="Boolean" />
+          <Property Name="ora_modif_firma_u" Type="Boolean" />
+          <Property Name="ora_modif_fyf_i" Type="Boolean" />
+          <NavigationProperty Name="C_PERSONA" Relationship="SILCVERModel.R_133" FromRole="C_PERSONA_IMG" ToRole="C_PERSONA" />
+          <Property Name="CONTROL_IMG" Type="Int32" Nullable="false" />
+          <Property Name="ZZ_MIGRA_IP104040" Type="Int32" />
+          <Property Name="FG" Type="String" MaxLength="34" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="R_133">
+          <End Role="C_PERSONA" Type="SILCVERModel.C_PERSONA" Multiplicity="1" />
+          <End Role="C_PERSONA_IMG" Type="SILCVERModel.C_PERSONA_IMG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_PERSONA">
+              <PropertyRef Name="ID_PERSONA" />
+            </Principal>
+            <Dependent Role="C_PERSONA_IMG">
+              <PropertyRef Name="ID_PERSONA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="R_134">
+          <End Role="C_PERSONA" Type="SILCVERModel.C_PERSONA" Multiplicity="1" />
+          <End Role="C_PERSONA_DOC" Type="SILCVERModel.C_PERSONA_DOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_PERSONA">
+              <PropertyRef Name="ID_PERSONA" />
+            </Principal>
+            <Dependent Role="C_PERSONA_DOC">
+              <PropertyRef Name="ID_PERSONA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="C_COLONIA">
+          <Key>
+            <PropertyRef Name="ID_COLONIA" />
+            <PropertyRef Name="ID_DELEG_MUNICIPIO" />
+            <PropertyRef Name="ID_ESTADO" />
+          </Key>
+          <Property Type="Int32" Name="ID_COLONIA" Nullable="false" />
+          <Property Type="String" Name="DSC_COLONIA" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ID_DELEG_MUNICIPIO" Nullable="false" />
+          <Property Type="Int32" Name="ID_ESTADO" Nullable="false" />
+          <Property Type="String" Name="NUM_CP" MaxLength="5" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="C_DELEG_MUNICIPIO" Relationship="SILCVERModel.R_32" FromRole="C_COLONIA" ToRole="C_DELEG_MUNICIPIO" />
+          <NavigationProperty Name="C_PERSONA" Relationship="SILCVERModel.R_93" FromRole="C_COLONIA" ToRole="C_PERSONA" />
+          <Property Name="ZZ_MIGRA_IP104040" Type="Int32" />
+        </EntityType>
+        <EntityType Name="C_DELEG_MUNICIPIO">
+          <Key>
+            <PropertyRef Name="ID_DELEG_MUNICIPIO" />
+            <PropertyRef Name="ID_ESTADO" />
+          </Key>
+          <Property Type="Int32" Name="ID_DELEG_MUNICIPIO" Nullable="false" />
+          <Property Type="String" Name="DSC_DELEG_MUNICIPIO" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ID_ESTADO" Nullable="false" />
+          <Property Type="Int32" Name="ID_C4" />
+          <NavigationProperty Name="C_COLONIA" Relationship="SILCVERModel.R_32" FromRole="C_DELEG_MUNICIPIO" ToRole="C_COLONIA" />
+          <Property Name="ZZ_MIGRA_IP104040" Type="Int32" />
+        </EntityType>
+        <EntityType Name="C_ESTADO_CIVIL">
+          <Key>
+            <PropertyRef Name="ID_ESTADO_CIVIL" />
+          </Key>
+          <Property Type="Int32" Name="ID_ESTADO_CIVIL" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="DSC_ESTADO_CIVIL" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ID_ESTATUS" Nullable="false" />
+          <NavigationProperty Name="C_PERSONA" Relationship="SILCVERModel.R_95" FromRole="C_ESTADO_CIVIL" ToRole="C_PERSONA" />
+        </EntityType>
+        <EntityType Name="C_PROFESION">
+          <Key>
+            <PropertyRef Name="ID_PROFESION" />
+          </Key>
+          <Property Type="Int32" Name="ID_PROFESION" Nullable="false" />
+          <Property Type="String" Name="DSC_PROFESION" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="C_PERSONA" Relationship="SILCVERModel.FK_C_PERSONA_C_PROFESION" FromRole="C_PROFESION" ToRole="C_PERSONA" />
+        </EntityType>
+        <EntityType Name="C_RESTRICCIONES_FISICAS">
+          <Key>
+            <PropertyRef Name="ID_RESTRICCIONES_FISICAS" />
+          </Key>
+          <Property Type="Int32" Name="ID_RESTRICCIONES_FISICAS" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="DSC_RESTRICCIONES_FISICAS" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="C_PERSONA" Relationship="SILCVERModel.FK_C_PERSONA_C_RESTRICCIONES_FISICAS" FromRole="C_RESTRICCIONES_FISICAS" ToRole="C_PERSONA" />
+        </EntityType>
+        <Association Name="R_32">
+          <End Type="SILCVERModel.C_DELEG_MUNICIPIO" Role="C_DELEG_MUNICIPIO" Multiplicity="1" />
+          <End Type="SILCVERModel.C_COLONIA" Role="C_COLONIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_DELEG_MUNICIPIO">
+              <PropertyRef Name="ID_DELEG_MUNICIPIO" />
+              <PropertyRef Name="ID_ESTADO" />
+            </Principal>
+            <Dependent Role="C_COLONIA">
+              <PropertyRef Name="ID_DELEG_MUNICIPIO" />
+              <PropertyRef Name="ID_ESTADO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="R_93">
+          <End Type="SILCVERModel.C_COLONIA" Role="C_COLONIA" Multiplicity="0..1" />
+          <End Type="SILCVERModel.C_PERSONA" Role="C_PERSONA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_COLONIA">
+              <PropertyRef Name="ID_COLONIA" />
+              <PropertyRef Name="ID_DELEG_MUNICIPIO" />
+              <PropertyRef Name="ID_ESTADO" />
+            </Principal>
+            <Dependent Role="C_PERSONA">
+              <PropertyRef Name="ID_COLONIA" />
+              <PropertyRef Name="ID_DELEG_MUNICIPIO" />
+              <PropertyRef Name="ID_ESTADO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="R_95">
+          <End Type="SILCVERModel.C_ESTADO_CIVIL" Role="C_ESTADO_CIVIL" Multiplicity="0..1" />
+          <End Type="SILCVERModel.C_PERSONA" Role="C_PERSONA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_ESTADO_CIVIL">
+              <PropertyRef Name="ID_ESTADO_CIVIL" />
+            </Principal>
+            <Dependent Role="C_PERSONA">
+              <PropertyRef Name="ID_ESTADO_CIVIL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_C_PERSONA_C_PROFESION">
+          <End Type="SILCVERModel.C_PROFESION" Role="C_PROFESION" Multiplicity="0..1" />
+          <End Type="SILCVERModel.C_PERSONA" Role="C_PERSONA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_PROFESION">
+              <PropertyRef Name="ID_PROFESION" />
+            </Principal>
+            <Dependent Role="C_PERSONA">
+              <PropertyRef Name="ID_PROFESION" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_C_PERSONA_C_RESTRICCIONES_FISICAS">
+          <End Type="SILCVERModel.C_RESTRICCIONES_FISICAS" Role="C_RESTRICCIONES_FISICAS" Multiplicity="0..1" />
+          <End Type="SILCVERModel.C_PERSONA" Role="C_PERSONA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_RESTRICCIONES_FISICAS">
+              <PropertyRef Name="ID_RESTRICCIONES_FISICAS" />
+            </Principal>
+            <Dependent Role="C_PERSONA">
+              <PropertyRef Name="ID_RESTRICCIONES_FISICAS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="vLicencias_NEW">
+          <Key>
+            <PropertyRef Name="ID_ALTERNA" />
+            <PropertyRef Name="SEXO" />
+            <PropertyRef Name="TIPO_DE_LIC" />
+            <PropertyRef Name="PERIODO" />
+            <PropertyRef Name="ENTIDAD_ID" />
+            <PropertyRef Name="SANGRE" />
+            <PropertyRef Name="NOMBRECOND" />
+            <PropertyRef Name="APELLIDOPA" />
+            <PropertyRef Name="APELLIDOMA" />
+            <PropertyRef Name="CURP" />
+            <PropertyRef Name="RFC" />
+          </Key>
+          <Property Name="ID_ALTERNA" Type="Int32" Nullable="false" />
+          <Property Name="SEXO" Type="Byte" Nullable="false" />
+          <Property Name="EXPEDICION" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="VENCIMIENT" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="TIPO_DE_LIC" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NO_LICENCI" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PERIODO" Type="Int16" Nullable="false" />
+          <Property Name="OFIEXP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ENTIDAD_ID" Type="Int32" Nullable="false" />
+          <Property Name="DELEGACION" Type="Int16" />
+          <Property Name="SANGRE" Type="Int32" Nullable="false" />
+          <Property Name="RESTRICCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRECOND" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDOPA" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDOMA" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="FECHANACIM" Type="DateTime" Precision="0" />
+          <Property Name="CURP" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RFC" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NACIONALIDAD" Type="Int16" />
+          <Property Name="ENTIDAD_CONDUCTOR" Type="Int16" />
+          <Property Name="MUN_ID" Type="Int16" />
+          <Property Name="MUNICIPIO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CALLE" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="COLONIA" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="CODPOSTAL" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="TELEFONO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Height" Type="Int16" />
+          <Property Name="Weight" Type="Int16" />
+          <Property Name="EnrollmentTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="vLicencias_Imagen_New">
+          <Key>
+            <PropertyRef Name="ID_ALTERNA" />
+            <PropertyRef Name="ID_TIPO_IMAGEN" />
+            <PropertyRef Name="NO_LICENCI" />
+          </Key>
+          <Property Name="ID_ALTERNA" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="ID_TIPO_IMAGEN" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+          <Property Name="ENTIDAD_ID" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="DELEGACION" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="NO_LICENCI" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Expedicion" Type="DateTime" Precision="3" />
+          <Property Name="VENCIMIENT" Type="DateTime" Precision="3" />
+          <Property Name="OFIEXP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IMAGENKEY" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="vLicencias_UNION">
+          <Key>
+            <PropertyRef Name="ID_ALTERNA" />
+            <PropertyRef Name="ESTATUS_REGISTRO" />
+          </Key>
+          <Property Name="ID_ALTERNA" Type="Int32" Nullable="false" />
+          <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDO_PATERNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDO_MATERNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FCH_NACIMIENTO" Type="DateTime" Precision="3" />
+          <Property Name="RFC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CURP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_REGISTRO" Type="DateTime" Precision="3" />
+          <Property Name="ESTATUS_REGISTRO" Type="Int32" Nullable="false" />
+          <Property Name="Busqueda" Type="String" MaxLength="171" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SILCVERModelStoreContainer" CdmEntityContainer="SILCVEREntities">
+          <EntitySetMapping Name="C_PERSONA">
+            <EntityTypeMapping TypeName="SILCVERModel.C_PERSONA">
+              <MappingFragment StoreEntitySet="C_PERSONA">
+                <ScalarProperty Name="PER_PESO" ColumnName="PER_PESO" />
+                <ScalarProperty Name="ZZ_MIGRA_IP104040" ColumnName="ZZ_MIGRA_IP104040" />
+                <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+                <ScalarProperty Name="PER_NOMBRE" ColumnName="PER_NOMBRE" />
+                <ScalarProperty Name="PER_APELLIDO_PATERNO" ColumnName="PER_APELLIDO_PATERNO" />
+                <ScalarProperty Name="PER_APELLIDO_MATERNO" ColumnName="PER_APELLIDO_MATERNO" />
+                <ScalarProperty Name="PER_FCH_NACIMIENTO" ColumnName="PER_FCH_NACIMIENTO" />
+                <ScalarProperty Name="PER_RFC" ColumnName="PER_RFC" />
+                <ScalarProperty Name="PER_CURP" ColumnName="PER_CURP" />
+                <ScalarProperty Name="PER_DOM_CALLE" ColumnName="PER_DOM_CALLE" />
+                <ScalarProperty Name="PER_DOM_NUM_EXT" ColumnName="PER_DOM_NUM_EXT" />
+                <ScalarProperty Name="PER_DOM_NUM_INT" ColumnName="PER_DOM_NUM_INT" />
+                <ScalarProperty Name="PER_DOM_REF_ADIC" ColumnName="PER_DOM_REF_ADIC" />
+                <ScalarProperty Name="PER_DOM_CP" ColumnName="PER_DOM_CP" />
+                <ScalarProperty Name="ID_COLONIA" ColumnName="ID_COLONIA" />
+                <ScalarProperty Name="ID_DELEG_MUNICIPIO" ColumnName="ID_DELEG_MUNICIPIO" />
+                <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+                <ScalarProperty Name="ID_SEXO" ColumnName="ID_SEXO" />
+                <ScalarProperty Name="ID_ESTADO_CIVIL" ColumnName="ID_ESTADO_CIVIL" />
+                <ScalarProperty Name="PER_IFE" ColumnName="PER_IFE" />
+                <ScalarProperty Name="ID_NACIONALIDAD" ColumnName="ID_NACIONALIDAD" />
+                <ScalarProperty Name="ID_TIPO_SANGRE" ColumnName="ID_TIPO_SANGRE" />
+                <ScalarProperty Name="ID_INSTITUCION" ColumnName="ID_INSTITUCION" />
+                <ScalarProperty Name="PER_TELEFONO" ColumnName="PER_TELEFONO" />
+                <ScalarProperty Name="PER_NOTAS" ColumnName="PER_NOTAS" />
+                <ScalarProperty Name="ID_ENTIDAD_NACIMIENTO" ColumnName="ID_ENTIDAD_NACIMIENTO" />
+                <ScalarProperty Name="PER_DOM_CP_SEPOMEX" ColumnName="PER_DOM_CP_SEPOMEX" />
+                <ScalarProperty Name="PER_CURP_CORRECTO" ColumnName="PER_CURP_CORRECTO" />
+                <ScalarProperty Name="PER_RFC_CORRECTO" ColumnName="PER_RFC_CORRECTO" />
+                <ScalarProperty Name="PER_IFE_CORRECTO" ColumnName="PER_IFE_CORRECTO" />
+                <ScalarProperty Name="PER_CORREO" ColumnName="PER_CORREO" />
+                <ScalarProperty Name="ID_TIPO_TELEFONO" ColumnName="ID_TIPO_TELEFONO" />
+                <ScalarProperty Name="PER_TELEFONO_LADA" ColumnName="PER_TELEFONO_LADA" />
+                <ScalarProperty Name="FCH_CREACION" ColumnName="FCH_CREACION" />
+                <ScalarProperty Name="DATOS_VALIDADOS" ColumnName="DATOS_VALIDADOS" />
+                <ScalarProperty Name="ID_D_CURSO" ColumnName="ID_D_CURSO" />
+                <ScalarProperty Name="ID_PROFESION" ColumnName="ID_PROFESION" />
+                <ScalarProperty Name="ID_PAIS_NACIMIENTO" ColumnName="ID_PAIS_NACIMIENTO" />
+                <ScalarProperty Name="DONA_ORGANOS" ColumnName="DONA_ORGANOS" />
+                <ScalarProperty Name="ID_RESTRICCIONES_FISICAS" ColumnName="ID_RESTRICCIONES_FISICAS" />
+                <ScalarProperty Name="ID_BOCA" ColumnName="ID_BOCA" />
+                <ScalarProperty Name="ID_CABELLO" ColumnName="ID_CABELLO" />
+                <ScalarProperty Name="ID_CARA" ColumnName="ID_CARA" />
+                <ScalarProperty Name="ID_COMPLEXION" ColumnName="ID_COMPLEXION" />
+                <ScalarProperty Name="ID_NARIZ" ColumnName="ID_NARIZ" />
+                <ScalarProperty Name="ID_OJOS" ColumnName="ID_OJOS" />
+                <ScalarProperty Name="ID_PIEL" ColumnName="ID_PIEL" />
+                <ScalarProperty Name="PER_ESTATURA" ColumnName="PER_ESTATURA" />
+                <ScalarProperty Name="PER_SENAS_PART" ColumnName="PER_SENAS_PART" />
+                <ScalarProperty Name="TUT_APELLIDO_PATERNO" ColumnName="TUT_APELLIDO_PATERNO" />
+                <ScalarProperty Name="TUT_APELLIDO_MATERNO" ColumnName="TUT_APELLIDO_MATERNO" />
+                <ScalarProperty Name="TUT_NOMBRE" ColumnName="TUT_NOMBRE" />
+                <ScalarProperty Name="ora_modif_MvCrdl_prsIgu1" ColumnName="ora_modif_MvCrdl_prsIgu1" />
+                <ScalarProperty Name="ora_modif_MvCrdl_i1" ColumnName="ora_modif_MvCrdl_i1" />
+                <ScalarProperty Name="ora_modif_MvCrdl_prsMig1" ColumnName="ora_modif_MvCrdl_prsMig1" />
+                <ScalarProperty Name="ora_modif_MvCrdl_FchAct" ColumnName="ora_modif_MvCrdl_FchAct" />
+                <ScalarProperty Name="ora_modif_MvCrdl_FchHis" ColumnName="ora_modif_MvCrdl_FchHis" />
+                <ScalarProperty Name="ora_modif_MvCrdl_SeSusti" ColumnName="ora_modif_MvCrdl_SeSusti" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_PERSONA_DOC">
+            <EntityTypeMapping TypeName="SILCVERModel.C_PERSONA_DOC">
+              <MappingFragment StoreEntitySet="C_PERSONA_DOC">
+                <ScalarProperty Name="ZZ_MIGRA_IP104040" ColumnName="ZZ_MIGRA_IP104040" />
+                <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+                <ScalarProperty Name="ID_TIPO_DOCUMENTO" ColumnName="ID_TIPO_DOCUMENTO" />
+                <ScalarProperty Name="DOC_IMAGEN" ColumnName="DOC_IMAGEN" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
+                <ScalarProperty Name="ora_modif_docper_i" ColumnName="ora_modif_docper_i" />
+                <ScalarProperty Name="ora_modif_clvdcmprs_ref" ColumnName="ora_modif_clvdcmprs_ref" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_PERSONA_HUELLAS">
+            <EntityTypeMapping TypeName="SILCVERModel.C_PERSONA_HUELLAS">
+              <MappingFragment StoreEntitySet="C_PERSONA_HUELLAS">
+                <ScalarProperty Name="FG" ColumnName="FG" />
+                <ScalarProperty Name="ZZ_MIGRA_IP104040" ColumnName="ZZ_MIGRA_IP104040" />
+                <ScalarProperty Name="CONTROL_HUELLAS" ColumnName="CONTROL_HUELLAS" />
+                <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+                <ScalarProperty Name="HUELLA_DER1_PK" ColumnName="HUELLA_DER1_PK" />
+                <ScalarProperty Name="HUELLA_DER2_PK" ColumnName="HUELLA_DER2_PK" />
+                <ScalarProperty Name="HUELLA_DER3_PK" ColumnName="HUELLA_DER3_PK" />
+                <ScalarProperty Name="HUELLA_DER4_PK" ColumnName="HUELLA_DER4_PK" />
+                <ScalarProperty Name="HUELLA_DER5_PK" ColumnName="HUELLA_DER5_PK" />
+                <ScalarProperty Name="HUELLA_IZQ1_PK" ColumnName="HUELLA_IZQ1_PK" />
+                <ScalarProperty Name="HUELLA_IZQ2_PK" ColumnName="HUELLA_IZQ2_PK" />
+                <ScalarProperty Name="HUELLA_IZQ3_PK" ColumnName="HUELLA_IZQ3_PK" />
+                <ScalarProperty Name="HUELLA_IZQ4_PK" ColumnName="HUELLA_IZQ4_PK" />
+                <ScalarProperty Name="HUELLA_IZQ5_PK" ColumnName="HUELLA_IZQ5_PK" />
+                <ScalarProperty Name="HUELLA_DER1_WSQ" ColumnName="HUELLA_DER1_WSQ" />
+                <ScalarProperty Name="HUELLA_DER2_WSQ" ColumnName="HUELLA_DER2_WSQ" />
+                <ScalarProperty Name="HUELLA_DER3_WSQ" ColumnName="HUELLA_DER3_WSQ" />
+                <ScalarProperty Name="HUELLA_DER4_WSQ" ColumnName="HUELLA_DER4_WSQ" />
+                <ScalarProperty Name="HUELLA_DER5_WSQ" ColumnName="HUELLA_DER5_WSQ" />
+                <ScalarProperty Name="HUELLA_IZQ1_WSQ" ColumnName="HUELLA_IZQ1_WSQ" />
+                <ScalarProperty Name="HUELLA_IZQ2_WSQ" ColumnName="HUELLA_IZQ2_WSQ" />
+                <ScalarProperty Name="HUELLA_IZQ3_WSQ" ColumnName="HUELLA_IZQ3_WSQ" />
+                <ScalarProperty Name="HUELLA_IZQ4_WSQ" ColumnName="HUELLA_IZQ4_WSQ" />
+                <ScalarProperty Name="HUELLA_IZQ5_WSQ" ColumnName="HUELLA_IZQ5_WSQ" />
+                <ScalarProperty Name="HUELLA_SLAP1_WSQ" ColumnName="HUELLA_SLAP1_WSQ" />
+                <ScalarProperty Name="HUELLA_SLAP2_WSQ" ColumnName="HUELLA_SLAP2_WSQ" />
+                <ScalarProperty Name="HUELLA_SLAP3_WSQ" ColumnName="HUELLA_SLAP3_WSQ" />
+                <ScalarProperty Name="HUELLA_DER1_ESTATUS" ColumnName="HUELLA_DER1_ESTATUS" />
+                <ScalarProperty Name="HUELLA_DER2_ESTATUS" ColumnName="HUELLA_DER2_ESTATUS" />
+                <ScalarProperty Name="HUELLA_DER3_ESTATUS" ColumnName="HUELLA_DER3_ESTATUS" />
+                <ScalarProperty Name="HUELLA_DER4_ESTATUS" ColumnName="HUELLA_DER4_ESTATUS" />
+                <ScalarProperty Name="HUELLA_DER5_ESTATUS" ColumnName="HUELLA_DER5_ESTATUS" />
+                <ScalarProperty Name="HUELLA_IZQ1_ESTATUS" ColumnName="HUELLA_IZQ1_ESTATUS" />
+                <ScalarProperty Name="HUELLA_IZQ2_ESTATUS" ColumnName="HUELLA_IZQ2_ESTATUS" />
+                <ScalarProperty Name="HUELLA_IZQ3_ESTATUS" ColumnName="HUELLA_IZQ3_ESTATUS" />
+                <ScalarProperty Name="HUELLA_IZQ4_ESTATUS" ColumnName="HUELLA_IZQ4_ESTATUS" />
+                <ScalarProperty Name="HUELLA_IZQ5_ESTATUS" ColumnName="HUELLA_IZQ5_ESTATUS" />
+                <ScalarProperty Name="ora_modif_wsq_u1" ColumnName="ora_modif_wsq_u1" />
+                <ScalarProperty Name="ora_modif_wsq_u2" ColumnName="ora_modif_wsq_u2" />
+                <ScalarProperty Name="ora_modif_wsq_u3" ColumnName="ora_modif_wsq_u3" />
+                <ScalarProperty Name="ora_modif_wsq_i1" ColumnName="ora_modif_wsq_i1" />
+                <ScalarProperty Name="ora_modif_pk_u1" ColumnName="ora_modif_pk_u1" />
+                <ScalarProperty Name="ora_modif_pk_u2" ColumnName="ora_modif_pk_u2" />
+                <ScalarProperty Name="ora_modif_pk_u3" ColumnName="ora_modif_pk_u3" />
+                <ScalarProperty Name="ora_modif_pk_i1" ColumnName="ora_modif_pk_i1" />
+                <ScalarProperty Name="ora_modif_status_der" ColumnName="ora_modif_status_der" />
+                <ScalarProperty Name="ora_modif_status_izq" ColumnName="ora_modif_status_izq" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_PERSONA_IMG">
+            <EntityTypeMapping TypeName="SILCVERModel.C_PERSONA_IMG">
+              <MappingFragment StoreEntitySet="C_PERSONA_IMG">
+                <ScalarProperty Name="FG" ColumnName="FG" />
+                <ScalarProperty Name="ZZ_MIGRA_IP104040" ColumnName="ZZ_MIGRA_IP104040" />
+                <ScalarProperty Name="CONTROL_IMG" ColumnName="CONTROL_IMG" />
+                <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+                <ScalarProperty Name="ID_TIPO_LICENCIA" ColumnName="ID_TIPO_LICENCIA" />
+                <ScalarProperty Name="IMG_FOTO" ColumnName="IMG_FOTO" />
+                <ScalarProperty Name="IMG_FOTO_CAMEO" ColumnName="IMG_FOTO_CAMEO" />
+                <ScalarProperty Name="IMG_FOTO_GHOST" ColumnName="IMG_FOTO_GHOST" />
+                <ScalarProperty Name="IMG_FIRMA" ColumnName="IMG_FIRMA" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
+                <ScalarProperty Name="ora_modif_foto_u" ColumnName="ora_modif_foto_u" />
+                <ScalarProperty Name="ora_modif_firma_u" ColumnName="ora_modif_firma_u" />
+                <ScalarProperty Name="ora_modif_fyf_i" ColumnName="ora_modif_fyf_i" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_COLONIA">
+            <EntityTypeMapping TypeName="SILCVERModel.C_COLONIA">
+              <MappingFragment StoreEntitySet="C_COLONIA">
+                <ScalarProperty Name="ZZ_MIGRA_IP104040" ColumnName="ZZ_MIGRA_IP104040" />
+                <ScalarProperty Name="NUM_CP" ColumnName="NUM_CP" />
+                <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+                <ScalarProperty Name="ID_DELEG_MUNICIPIO" ColumnName="ID_DELEG_MUNICIPIO" />
+                <ScalarProperty Name="DSC_COLONIA" ColumnName="DSC_COLONIA" />
+                <ScalarProperty Name="ID_COLONIA" ColumnName="ID_COLONIA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_DELEG_MUNICIPIO">
+            <EntityTypeMapping TypeName="SILCVERModel.C_DELEG_MUNICIPIO">
+              <MappingFragment StoreEntitySet="C_DELEG_MUNICIPIO">
+                <ScalarProperty Name="ZZ_MIGRA_IP104040" ColumnName="ZZ_MIGRA_IP104040" />
+                <ScalarProperty Name="ID_C4" ColumnName="ID_C4" />
+                <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+                <ScalarProperty Name="DSC_DELEG_MUNICIPIO" ColumnName="DSC_DELEG_MUNICIPIO" />
+                <ScalarProperty Name="ID_DELEG_MUNICIPIO" ColumnName="ID_DELEG_MUNICIPIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_ESTADO_CIVIL">
+            <EntityTypeMapping TypeName="SILCVERModel.C_ESTADO_CIVIL">
+              <MappingFragment StoreEntitySet="C_ESTADO_CIVIL">
+                <ScalarProperty Name="ID_ESTATUS" ColumnName="ID_ESTATUS" />
+                <ScalarProperty Name="DSC_ESTADO_CIVIL" ColumnName="DSC_ESTADO_CIVIL" />
+                <ScalarProperty Name="ID_ESTADO_CIVIL" ColumnName="ID_ESTADO_CIVIL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_PROFESION">
+            <EntityTypeMapping TypeName="SILCVERModel.C_PROFESION">
+              <MappingFragment StoreEntitySet="C_PROFESION">
+                <ScalarProperty Name="DSC_PROFESION" ColumnName="DSC_PROFESION" />
+                <ScalarProperty Name="ID_PROFESION" ColumnName="ID_PROFESION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_RESTRICCIONES_FISICAS">
+            <EntityTypeMapping TypeName="SILCVERModel.C_RESTRICCIONES_FISICAS">
+              <MappingFragment StoreEntitySet="C_RESTRICCIONES_FISICAS">
+                <ScalarProperty Name="DSC_RESTRICCIONES_FISICAS" ColumnName="DSC_RESTRICCIONES_FISICAS" />
+                <ScalarProperty Name="ID_RESTRICCIONES_FISICAS" ColumnName="ID_RESTRICCIONES_FISICAS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vLicencias_NEW">
+            <EntityTypeMapping TypeName="SILCVERModel.vLicencias_NEW">
+              <MappingFragment StoreEntitySet="vLicencias_NEW">
+                <ScalarProperty Name="EnrollmentTime" ColumnName="EnrollmentTime" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="CODPOSTAL" ColumnName="CODPOSTAL" />
+                <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+                <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+                <ScalarProperty Name="MUNICIPIO" ColumnName="MUNICIPIO" />
+                <ScalarProperty Name="MUN_ID" ColumnName="MUN_ID" />
+                <ScalarProperty Name="ENTIDAD_CONDUCTOR" ColumnName="ENTIDAD_CONDUCTOR" />
+                <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+                <ScalarProperty Name="RFC" ColumnName="RFC" />
+                <ScalarProperty Name="CURP" ColumnName="CURP" />
+                <ScalarProperty Name="FECHANACIM" ColumnName="FECHANACIM" />
+                <ScalarProperty Name="APELLIDOMA" ColumnName="APELLIDOMA" />
+                <ScalarProperty Name="APELLIDOPA" ColumnName="APELLIDOPA" />
+                <ScalarProperty Name="NOMBRECOND" ColumnName="NOMBRECOND" />
+                <ScalarProperty Name="RESTRICCION" ColumnName="RESTRICCION" />
+                <ScalarProperty Name="SANGRE" ColumnName="SANGRE" />
+                <ScalarProperty Name="DELEGACION" ColumnName="DELEGACION" />
+                <ScalarProperty Name="ENTIDAD_ID" ColumnName="ENTIDAD_ID" />
+                <ScalarProperty Name="OFIEXP" ColumnName="OFIEXP" />
+                <ScalarProperty Name="PERIODO" ColumnName="PERIODO" />
+                <ScalarProperty Name="NO_LICENCI" ColumnName="NO_LICENCI" />
+                <ScalarProperty Name="TIPO_DE_LIC" ColumnName="TIPO_DE_LIC" />
+                <ScalarProperty Name="VENCIMIENT" ColumnName="VENCIMIENT" />
+                <ScalarProperty Name="EXPEDICION" ColumnName="EXPEDICION" />
+                <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+                <ScalarProperty Name="ID_ALTERNA" ColumnName="ID_ALTERNA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vLicencias_Imagen_New">
+            <EntityTypeMapping TypeName="SILCVERModel.vLicencias_Imagen_New">
+              <MappingFragment StoreEntitySet="vLicencias_Imagen_New">
+                <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+                <ScalarProperty Name="IMAGENKEY" ColumnName="IMAGENKEY" />
+                <ScalarProperty Name="OFIEXP" ColumnName="OFIEXP" />
+                <ScalarProperty Name="VENCIMIENT" ColumnName="VENCIMIENT" />
+                <ScalarProperty Name="Expedicion" ColumnName="Expedicion" />
+                <ScalarProperty Name="NO_LICENCI" ColumnName="NO_LICENCI" />
+                <ScalarProperty Name="DELEGACION" ColumnName="DELEGACION" />
+                <ScalarProperty Name="ENTIDAD_ID" ColumnName="ENTIDAD_ID" />
+                <ScalarProperty Name="ID_TIPO_IMAGEN" ColumnName="ID_TIPO_IMAGEN" />
+                <ScalarProperty Name="ID_ALTERNA" ColumnName="ID_ALTERNA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vLicencias_UNION">
+            <EntityTypeMapping TypeName="SILCVERModel.vLicencias_UNION">
+              <MappingFragment StoreEntitySet="vLicencias_UNION">
+                <ScalarProperty Name="Busqueda" ColumnName="Busqueda" />
+                <ScalarProperty Name="ESTATUS_REGISTRO" ColumnName="ESTATUS_REGISTRO" />
+                <ScalarProperty Name="FECHA_REGISTRO" ColumnName="FECHA_REGISTRO" />
+                <ScalarProperty Name="CURP" ColumnName="CURP" />
+                <ScalarProperty Name="RFC" ColumnName="RFC" />
+                <ScalarProperty Name="FCH_NACIMIENTO" ColumnName="FCH_NACIMIENTO" />
+                <ScalarProperty Name="APELLIDO_MATERNO" ColumnName="APELLIDO_MATERNO" />
+                <ScalarProperty Name="APELLIDO_PATERNO" ColumnName="APELLIDO_PATERNO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="ID_ALTERNA" ColumnName="ID_ALTERNA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

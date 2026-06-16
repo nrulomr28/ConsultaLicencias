@@ -1,0 +1,114 @@
+﻿
+
+input[type="button"], input[type="submit"] {
+    background-color: #047EC1;
+    
+    border: 2px solid #0363B9;
+    height: 30px;
+    padding: 0px 15px 0px 15px;
+    font-size: 10px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1px;
+}
+
+    input[type="button"]:hover, input[type="submit"]:hover {
+        background-color: #036DA7;
+    }
+
+
+    input[type="button"], input[type="submit"] .ajax__html_editor_extender_button {
+        background-color: none;
+        
+        border: inherit;
+        padding: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        text-transform: inherit;
+    }
+
+
+
+
+ 
+
+
+input[type="text"], input[type="password"] {
+    width: 96%;
+    border: 1px solid #CCC;
+    font-family: Arial;
+    font-size: 12px;
+    color: #000;
+    padding: 5px 2% 5px 2%;
+    text-transform: uppercase;
+    background-color: #FFFFFF;
+}
+
+    input[type="text"]:focus, input[type="password"]:focus
+    {
+        border: 1px solid #047EC1;
+        box-shadow: 5px 5px 20px rgba(0,205,255,.3);
+    }
+
+select {
+    width: 100%;
+    border: 1px solid #CCC;
+    font-family: Arial;
+    font-size: 12px;
+    color: #000;
+    padding: 3px 2% 3px 2%;
+    text-transform: uppercase;
+    background-color: #FFFFFF;
+}
+
+    select:focus {
+        border: 1px solid #047EC1;
+        box-shadow: 5px 5px 20px rgba(0,205,255,.3);
+    }
+
+
+.ClassSupervisorReaccionBotonEscalamiento
+{
+    background-color: #D9DADC !important;
+    width: 263px;
+    height: 41px !important;
+    background-image: url(../../Images/SupervisorReaccion/BotonEscalamiento.png);
+    border: 0px !important;
+    cursor: pointer;
+}
+.ClassSupervisorReaccionBotonNuevoElemento
+{
+    background-color: #D9DADC !important;
+    width: 263px;
+    height: 41px !important;
+    background-image: url(../../Images/SupervisorReaccion/BotonNuevoEvento.png);
+    border: 0px !important;
+    cursor: pointer;
+}
+.ClassSupervisorReaccionTituloeventosDelDia
+{
+    background-color: #0036BC;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    font-size: 20px;
+    color: #FFF;
+    text-align: center;
+}
+.ClassSupervisorReaccionGraficas div div
+{
+    border: 0px !important;
+}
+
+textarea
+{
+    width: 100%;
+    border: 1px solid #CCC;   
+    font-family: Arial;
+    font-size: 12px;
+    color: #000;
+    padding: 3px 2% 3px 2%;
+    text-transform: uppercase;
+    background-color:#CCCCCC;
+    resize: none;
+}

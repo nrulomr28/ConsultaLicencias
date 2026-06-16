@@ -1,0 +1,26 @@
+﻿.ClassGraficas
+{
+    width: 960px;
+    margin-left: 100px;
+    border: 0px;
+}
+    .ClassGraficas tbody tr td
+    {
+        width: 320px;
+        height: 300px;
+    }
+    .ClassGraficas tbody tr td div div
+    {
+        border: 0px !important;
+    }
+    .ClassGraficas tbody tr td div div svg
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .ClassGraficas tbody tr td div div svg text
+    {
+        font-size: 10px;
+        color: #808080;
+        font-weight: bold;
+    }

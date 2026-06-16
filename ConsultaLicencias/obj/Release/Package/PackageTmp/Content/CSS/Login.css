@@ -1,0 +1,51 @@
+﻿.ClassLogin
+{
+    width: 500px;
+    font-family: Arial;
+    background-color: #B7B7B7;
+}
+.ClassLoginError
+{
+    font-size: 11px;
+    font-weight: bold;
+    text-align: right;
+    color: #920C12;
+    text-align: center;
+}
+
+    #login a {
+        /*background-color: #d3dce0;*/
+        margin-left: 10px;
+        margin-right: 3px;
+        padding: 2px 3px;
+        text-decoration: none;
+    }
+
+        #login a.username {
+            background: none;
+            /*margin-left: 0px;*/
+            text-decoration: underline;
+        }
+
+    #login ul {
+        margin: 0;
+        text-transform: none;
+    }
+
+    #login li {
+        display: inline;
+        list-style: none;
+    }
+.ClassNombreUsuario {
+    text-transform: none !important;
+}
+
+#MainContent_loginx_UserName
+{
+    text-transform: none !important;
+}
+legend
+{
+    font-size: 14px;
+    font-weight: bold;
+}
