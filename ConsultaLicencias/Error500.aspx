@@ -79,7 +79,7 @@
             Intente nuevamente en unos minutos.
         </div>
 
-        <a href="Default.aspx" class="boton">
+        <a href="~/Acceso/Default.aspx" class="boton">
             Volver al Inicio
         </a>
     </div>

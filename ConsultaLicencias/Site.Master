@@ -1,192 +1,66 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ConsultaLicencias.SiteMaster" %>
-
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true"
+    CodeBehind="Site.master.cs"
+    Inherits="ConsultaLicencias.SiteMaster" %>
 
 <!DOCTYPE html>
-<html lang="es">
-<head runat="server">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - SSPVER </title>
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>
-    <%--<webopt:BundleReference runat="server" Path="~/Content/css" />--%>
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link id="Link1" type="text/css" href="~/Content/CSS/Basico.css" rel="stylesheet" runat="server" />
-    <link id="Link16" type="text/css" href="~/Content/CSS/Botones.css" rel="stylesheet" runat="server" />
-    <link id="Link2" type="text/css" href="~/Content/CSS/Componentes.css" rel="stylesheet" runat="server" />
-    <link id="Link3" type="text/css" href="~/Content/CSS/Cuerpo.css" rel="stylesheet" runat="server" />
-    <link id="Link4" type="text/css" href="~/Content/CSS/Escalamiento.css" rel="stylesheet" runat="server" />
-    <link id="Link5" type="text/css" href="~/Content/CSS/Fuentes.css" rel="stylesheet" runat="server" />
-    <link id="Link6" type="text/css" href="~/Content/CSS/Graficas.css" rel="stylesheet" runat="server" />
-    <link id="Link7" type="text/css" href="~/Content/CSS/MenuVertical.css" rel="stylesheet" runat="server" />
-    <link id="Link8" type="text/css" href="~/Content/CSS/Menu.css" rel="stylesheet" runat="server" />
-    <link id="Link9" type="text/css" href="~/Content/CSS/Pie.css" rel="stylesheet" runat="server" />
-    <link id="Link10" type="text/css" href="~/Content/CSS/Renglones.css" rel="stylesheet" runat="server" />
-    <link id="Link11" type="text/css" href="~/Content/CSS/Titulo.css" rel="stylesheet" runat="server" />
-    <link id="Link12" type="text/css" href="~/Content/CSS/Cabecera.css" rel="stylesheet" runat="server" />
-    <link id="Link13" type="text/css" href="~/Content/CSS/Calendario.css" rel="stylesheet" runat="server" />
-    <link id="Link14" type="text/css" href="~/Content/CSS/Login.css" rel="stylesheet" runat="server" />
-    <link id="Link15" type="text/css" href="~/Content/CSS/SupervisorReaccion.css" rel="stylesheet" runat="server" />
 
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="fonts/faw/css/all.css" rel="stylesheet" />
+<head id="Head1" runat="server">
 
-    <%--<link rel="apple-touch-icon" href="images/estrellatiny.png" />--%>
-    
-    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+
+    <title>Consulta de Licencias</title>
+
+    <link href="Content/Site.css"
+          rel="stylesheet"
+          type="text/css" />
+
+    <asp:ContentPlaceHolder
+        ID="HeadContent"
+        runat="server">
+    </asp:ContentPlaceHolder>
+
 </head>
+
 <body>
-    <form id="Form1" runat="server">
-        <%--<asp:ScriptManager runat="server">--%>
-        <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnableScriptGlobalization="true" AsyncPostBackTimeout="600">
-            <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>
-                <%--Framework Scripts--%>
-                <%--<asp:ScriptReference Name="MsAjaxBundle" />--%>
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="bootstrap" />
-                <asp:ScriptReference Name="jquery.ui.combined" />
-                <asp:ScriptReference Name="WebForms.js" Path="~/Scripts/WebForms/WebForms.js" />
-                <asp:ScriptReference Name="WebUIValidation.js" Path="~/Scripts/WebForms/WebUIValidation.js" />
-                <asp:ScriptReference Name="MenuStandards.js" Path="~/Scripts/WebForms/MenuStandards.js" />
-                <asp:ScriptReference Name="GridView.js" Path="~/Scripts/WebForms/GridView.js" />
-                <asp:ScriptReference Name="DetailsView.js" Path="~/Scripts/WebForms/DetailsView.js" />
-                <asp:ScriptReference Name="TreeView.js" Path="~/Scripts/WebForms/TreeView.js" />
-                <asp:ScriptReference Name="WebParts.js" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
-            </Scripts>
-        </ajaxToolkit:ToolkitScriptManager>
-        <%--</asp:ScriptManager>--%>
 
-        <header>
-            <div id="IDCabecera">
-                <div class="ClassAlto10"></div>
-                <table width="100%" height="70">
-                    <tr>
-                        <td width="2%"></td>
-                        <td width="28%">
-                            <img id="IDLogoSADA" runat="server" src="~/Images/Cabecera/LogoSADA.png" /></td>
-                        <td width="20%">
-                            <asp:LoginView ID="LoginView2" runat="server">
-                                <LoggedInTemplate>
-                                    <b>Bienvenido:</b>
-                                    <br />
-                                    <asp:LoginName ID="LoginName1" runat="server" />
-                                </LoggedInTemplate>
-                            </asp:LoginView>
-                            <asp:Label ID="lblRol" runat="server" Text=""></asp:Label>
-                        </td>
-                        <td width="20%" id="IDCabeceraFechaHora" class="ClassCabeceraFechaHora" align="right"></td>
-                        <td width="28%" align="right">                            
-                        <td width="2%"></td>
-                    </tr>
-                    
-                </table>
-                <div class="ClassAlto10"></div>
+    <form id="form1" runat="server">
+
+        <asp:ScriptManager
+            ID="ScriptManager1"
+            runat="server">
+        </asp:ScriptManager>
+
+        <div class="header">
+
+            <div class="header-title">
+                Consulta de Licencias
             </div>
 
-            <div id="IDMenu">
-                <table width="100%" height="50" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td width="2%"></td>
-                        <td width="33%" class="ClassRuta"><%: Page.Title %></td>
-                        <td width="63%" align="right">
-
-                            <asp:LoginView ID="LoginView1" runat="server">
-                                <RoleGroups>
-                                    <asp:RoleGroup Roles="Administrador del Sistema">
-                                        <ContentTemplate>
-                                            <asp:Menu ID="Menu" CssClass="ClassMenu" align="right" runat="server" DynamicHorizontalOffset="0" Orientation="Horizontal">
-                                                <Items>
-                                                    <asp:MenuItem NavigateUrl="~/Account/AdministraRolesUsuarios.aspx" Text="Admon. Usuarios" Value="Admon. Usuarios"></asp:MenuItem>
-                                                    <asp:MenuItem NavigateUrl="~/Account/RegistroUsuario.aspx" Text="Agregar Usuario" Value="Agregar Usuario"></asp:MenuItem>
-                                                    <asp:MenuItem NavigateUrl="~/Account/FrmLogout.aspx" Text="Salir" Value="Salir"></asp:MenuItem>
-                                                </Items>
-                                                <StaticMenuItemStyle BackColor="#C4C6CA" ForeColor="#000" HorizontalPadding="20px" VerticalPadding="10px" />
-                                                <StaticHoverStyle BackColor="#666666" ForeColor="White" />
-                                                <StaticSelectedStyle BackColor="#1C5E55" />
-                                                <DynamicMenuItemStyle HorizontalPadding="15px" VerticalPadding="10px" />
-                                                <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
-                                                <DynamicMenuStyle BackColor="#E3EAEB" />
-                                                <DynamicSelectedStyle BackColor="#1C5E55" />
-                                            </asp:Menu>
-                                        </ContentTemplate>
-                                    </asp:RoleGroup>
-                                    <asp:RoleGroup Roles="Consulta Licencias">
-                                        <ContentTemplate>
-                                            <asp:Menu ID="Menu" CssClass="ClassMenu" align="right" runat="server" DynamicHorizontalOffset="0" Orientation="Horizontal">
-                                                <Items>
-                                                    <asp:MenuItem NavigateUrl="~/Consulta.aspx" Text="Consulta en histórico" Value="Consulta en histórico"></asp:MenuItem>
-                                                    <asp:MenuItem NavigateUrl="~/ConsultaLicencias.aspx" Text="Consulta SIGELIC" Value="Consulta SIGELIC"></asp:MenuItem>
-                                                    <asp:MenuItem NavigateUrl="~/Account/FrmLogout.aspx" Text="Salir" Value="Salir"></asp:MenuItem>
-                                                </Items>
-                                                <StaticMenuItemStyle BackColor="#C4C6CA" ForeColor="#000" HorizontalPadding="20px" VerticalPadding="10px" />
-                                                <StaticHoverStyle BackColor="#666666" ForeColor="White" />
-                                                <StaticSelectedStyle BackColor="#1C5E55" />
-                                                <DynamicMenuItemStyle HorizontalPadding="15px" VerticalPadding="10px" />
-                                                <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
-                                                <DynamicMenuStyle BackColor="#E3EAEB" />
-                                                <DynamicSelectedStyle BackColor="#1C5E55" />
-                                            </asp:Menu>
-                                        </ContentTemplate>
-                                    </asp:RoleGroup>
-
-
-                                </RoleGroups>
-                                <LoggedInTemplate>
-                                </LoggedInTemplate>
-
-                            </asp:LoginView>
-                        </td>
-                        <td width="2%"></td>
-                    </tr>
-                </table>
+            <div class="header-subtitle">
+                Secretaría de Seguridad Pública del Estado de Veracruz
             </div>
 
-            <div class="ClassAlto20"></div>
-            <table width="100%">
-                <tr>
-                    <td width="2%"></td>
-                    <td width="96%">
-                        <div id="Div1">
-                            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-                            <section class="content-wrapper main-content clear-fix">
-                                <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-                            </section>
-                        </div>
-        </header>
-        
+        </div>
 
+        <asp:ContentPlaceHolder
+            ID="FeaturedContent"
+            runat="server">
+        </asp:ContentPlaceHolder>
 
-        <footer>
-            </td>
-                    <td width="2%"></td>
-            </tr>
-            </table>
-            
-            <div class="ClassAlto20"></div>
-            <div class="ClassPie" align="center">
-                <table width="100%">
-                    <tr>
-                        <td width="20%"></td>
-                        <td width="60%">Se proh&iacute;be la reproducci&oacute;n total o parcial contenida en este Sistema Inform&aacute;tico sin el consentimiento expreso y por escrito de la Secretar&iacute;a de Seguridad
-                            P&uacute;blica del Estado de Veracruz.
-                            Esta plataforma digital deber&aacute; ser utilizada &uacute;nicamente por el personal autorizado y debidamente certificado de esta 
-                            Secretar&iacute;a. Cualquier violaci&oacute;n a la integridad de este sistema ser&aacute; castigada severamente.
-                            <br />
-                            [ &copy; <%: DateTime.Now.Year %> SSP VERACRUZ - TECNOLOG&iacute;AS DE LA INFORMACI&oacute;N - DESARROLLO DE APLICACIONES ]
-                        </td>
-                        <td width="20%"></td>
-                    </tr>
-                </table>
-                </table>
-            </div>
-        </footer>
+        <asp:ContentPlaceHolder
+            ID="MainContent"
+            runat="server">
+        </asp:ContentPlaceHolder>
+
+        <div class="footer">
+            Secretaría de Seguridad Pública del Estado de Veracruz
+        </div>
+
     </form>
+
 </body>
+
 </html>
