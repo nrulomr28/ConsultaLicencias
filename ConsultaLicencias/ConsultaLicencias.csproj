@@ -316,11 +316,11 @@
       <DependentUpon>ModeloLicencias.edmx</DependentUpon>
       <LastGenOutput>ModeloLicencias.cs</LastGenOutput>
     </Content>
-    <Content Include="Imagen.ashx" />
-    <Content Include="ImagenFirma.ashx" />
+    <Content Include="Infrastructure\Handlers\ImageHandler.ashx" />
+    <Content Include="Infrastructure\Handlers\ImageFirmaHandler.ashx" />
     <Content Include="Content\Web.config" />
     <Content Include="Images\Web.config" />
-    <Content Include="ImagenDocto.ashx" />
+    <Content Include="Infrastructure\Handlers\DocumentoHandler.ashx" />
     <Content Include="fonts\faw\webfonts\fa-brands-400.eot" />
     <Content Include="fonts\faw\webfonts\fa-brands-400.ttf" />
     <Content Include="fonts\faw\webfonts\fa-brands-400.woff" />
@@ -608,6 +608,8 @@
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="DTOs\DocumentoDto.cs" />
+    <Compile Include="DTOs\ImagenDto.cs" />
     <Compile Include="DTOs\PersonaBusquedaDto.cs" />
     <Compile Include="Error401.aspx.cs">
       <DependentUpon>Error401.aspx</DependentUpon>
@@ -633,15 +635,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Imagen.ashx.cs">
-      <DependentUpon>Imagen.ashx</DependentUpon>
+    <Compile Include="Infrastructure\Handlers\ImageHandler.ashx.cs">
+      <DependentUpon>ImageHandler.ashx</DependentUpon>
     </Compile>
-    <Compile Include="ImagenDocto.ashx.cs">
-      <DependentUpon>ImagenDocto.ashx</DependentUpon>
+    <Compile Include="Infrastructure\Handlers\DocumentoHandler.ashx.cs">
+      <DependentUpon>DocumentoHandler.ashx</DependentUpon>
     </Compile>
-    <Compile Include="ImagenFirma.ashx.cs">
-      <DependentUpon>ImagenFirma.ashx</DependentUpon>
+    <Compile Include="Infrastructure\Handlers\ImageFirmaHandler.ashx.cs">
+      <DependentUpon>ImageFirmaHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Security\AuthenticationGuard.cs" />
+    <Compile Include="Infrastructure\Security\SessionGuard.cs" />
+    <Compile Include="Infrastructure\TiposDocumento.cs" />
     <Compile Include="ModeloLicencias.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -658,6 +663,8 @@
       <DependentUpon>ModeloLicencias.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DocumentoConsultaService.cs" />
+    <Compile Include="Services\ImagenConsultaService.cs" />
     <Compile Include="Services\PersonaBusquedaService.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
