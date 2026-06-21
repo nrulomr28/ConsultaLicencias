@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsultaLicencias.Services;
+using System;
 
 using System.Linq;
 using System.Web.UI.WebControls;
@@ -12,18 +13,32 @@ namespace ConsultaLicencias
         {
             if (!IsPostBack)
             {
-                GridView1.Visible = false;
+                gvBusqueda.Visible = false;
                 Panel1.Visible = false;
             }
-        }        
-
-        protected void btnBuscar_Click(object sender, EventArgs e)
-        {
-            GridView1.DataBind();
-            GridView1.Visible = true;
-            this.Panel1.Visible = false;            
         }
-                                
+
+        protected void btnBuscar_Click(
+            object sender,
+            EventArgs e)
+        {
+            string criterio =
+                txtBusqueda.Text.Trim();
+
+            var service =
+                new PersonaBusquedaService();
+
+            var resultados =
+                service.Buscar(criterio);
+
+            gvBusqueda.DataSource = resultados;
+            gvBusqueda.DataBind();
+
+            gvBusqueda.Visible = resultados.Any();
+
+            Panel1.Visible = false;
+        }
+
 
         protected void TCTabs_ActiveTabChanged(object sender, EventArgs e)
         {
@@ -42,9 +57,9 @@ namespace ConsultaLicencias
 
 
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void gvBusqueda_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (GridView1.SelectedIndex < 0)
+            if (gvBusqueda.SelectedIndex < 0)
             {
                 Panel1.Visible = false;
                 return;
@@ -53,16 +68,19 @@ namespace ConsultaLicencias
             Panel1.Visible = true;
 
             string idPersona =
-                GridView1.SelectedDataKey.Value.ToString();
+                gvBusqueda.SelectedDataKey.Value.ToString();
 
             Imagen1.ImageUrl =
-                $"ImagenDocto.ashx?IdPersona={idPersona}&IdTipoDocto=1";
+                    ResolveUrl(
+                    $"~/Infrastructure/Handlers/DocumentoHandler.ashx?IdPersona={idPersona}&IdTipoDocto=1");
 
             Imagen2.ImageUrl =
-                $"ImagenDocto.ashx?IdPersona={idPersona}&IdTipoDocto=2";
+                ResolveUrl(
+                    $"~/Infrastructure/Handlers/DocumentoHandler.ashx?IdPersona={idPersona}&IdTipoDocto=2");
 
             Imagen3.ImageUrl =
-                $"ImagenDocto.ashx?IdPersona={idPersona}&IdTipoDocto=14";
+                ResolveUrl(
+                    $"~/Infrastructure/Handlers/DocumentoHandler.ashx?IdPersona={idPersona}&IdTipoDocto=14");
         }
 
         protected void EntityDataSourcePersonaSeleccionada_Selected(

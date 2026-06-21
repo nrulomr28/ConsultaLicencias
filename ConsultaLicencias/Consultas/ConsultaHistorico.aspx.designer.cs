@@ -33,22 +33,13 @@ namespace ConsultaLicencias
         protected global::System.Web.UI.WebControls.Button btnBuscar;
 
         /// <summary>
-        /// Control GridView1.
+        /// Control gvBusqueda.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-
-        /// <summary>
-        /// Control edsPersonas.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.EntityDataSource edsPersonas;
+        protected global::System.Web.UI.WebControls.GridView gvBusqueda;
 
         /// <summary>
         /// Control EntityDataSourcePersonaSeleccionada.

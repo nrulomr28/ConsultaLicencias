@@ -45,3 +45,26 @@ El sistema es predecesor de SIGELIC y actualmente se encuentra en proceso de est
 * FriendlyUrls estabilizadas
 * Login funcional
 * Consulta histórica pendiente de documentación
+
+## Rediseño - Resultado de hoy 20 06 2026
+Infrastructure
+│
+├── Handlers
+│   ├── DocumentoHandler
+│   ├── ImageHandler
+│   └── ImageFirmaHandler
+│
+├── Security
+│   └── SessionGuard
+│
+Services
+│
+├── PersonaBusquedaService
+├── DocumentoConsultaService
+└── ImagenConsultaService
+│
+DTOs
+│
+├── PersonaBusquedaDto
+├── DocumentoDto
+└── ImagenDto

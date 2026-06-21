@@ -35,106 +35,74 @@
 </div>     
     
 
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="ID_PERSONA" DataSourceID="edsPersonas"
-        GridLines="None" RowStyle-CssClass="ClassRenglonResultados" BorderStyle="None" CssClass="ClassRenglon" Visible="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
-        <Columns>
-            <asp:TemplateField>
-                <ItemTemplate>
-                    <asp:ImageButton ID="Image1" runat="server" ImageUrl='<%# "~/Imagen.ashx?IdImagen=" + Eval("ID_PERSONA") %>' Height="100px" Width="80px" CommandName ="Select" />
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:BoundField DataField="ID_PERSONA" HeaderText="ID_PERSONA" ReadOnly="True" SortExpression="ID_PERSONA" Visible="False" />
-            <asp:TemplateField HeaderText="Nombre" SortExpression="PER_NOMBRE">
-                <EditItemTemplate>
-                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("PER_NOMBRE") %>'></asp:TextBox>
-                </EditItemTemplate>
-                <ItemTemplate>
-                    <asp:Label ID="Label2" runat="server" Text='<%# Bind("PER_NOMBRE") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:BoundField DataField="PER_APELLIDO_PATERNO" HeaderText="Paterno" SortExpression="PER_APELLIDO_PATERNO" />
-            <asp:BoundField DataField="PER_APELLIDO_MATERNO" HeaderText="Materno" SortExpression="PER_APELLIDO_MATERNO" />
-            <asp:BoundField DataField="PER_FCH_NACIMIENTO" HeaderText="Nacimiento" SortExpression="PER_FCH_NACIMIENTO" DataFormatString="{0:d}" />
-            <asp:BoundField DataField="PER_RFC" HeaderText="Rfc" SortExpression="PER_RFC" />
-            <asp:BoundField DataField="PER_CURP" HeaderText="Curp" SortExpression="PER_CURP" />
-            <asp:BoundField DataField="PER_ESTATURA" HeaderText="Estatura" SortExpression="PER_ESTATURA" />
-            <asp:BoundField DataField="PER_DOM_CALLE" HeaderText="Calle" SortExpression="PER_DOM_CALLE" />
-            <asp:BoundField DataField="PER_DOM_NUM_EXT" HeaderText="Num Ext" SortExpression="PER_DOM_NUM_EXT" />
-            <asp:BoundField DataField="PER_DOM_NUM_INT" HeaderText="Num Int" SortExpression="PER_DOM_NUM_INT" />
-            <asp:TemplateField HeaderText="COLONIA" SortExpression="ID_COLONIA">
-                <ItemTemplate>
-                    <asp:Label runat="server" Text='<%# Eval("C_COLONIA.DSC_COLONIA") %>' ID="Label1"></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:BoundField DataField="PER_DOM_REF_ADIC" HeaderText="Referencia Adicional" SortExpression="PER_DOM_REF_ADIC" />
-            <asp:BoundField DataField="C_COLONIA.C_DELEG_MUNICIPIO.DSC_DELEG_MUNICIPIO" HeaderText="Municipio" SortExpression="C_COLONIA.C_DELEG_MUNICIPIO.DSC_DELEG_MUNICIPIO" />
-            <asp:BoundField DataField="PER_DOM_CP" HeaderText="CP" SortExpression="PER_DOM_CP" />
-            <asp:BoundField DataField="C_PROFESION.DSC_PROFESION" HeaderText="Profesión" SortExpression="C_PROFESION" />
-            <asp:TemplateField HeaderText="SEXO" SortExpression="ID_SEXO">
-                <ItemTemplate>
-                    <asp:Label runat="server" Text='<%# Eval("ID_SEXO") == null ? "" :  Eval("ID_SEXO").Equals(1) ? "Masculino" : Eval("ID_SEXO").Equals(2) ? "Femenino" : "No especificado" %>' ID="lblGridSexo"></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:BoundField DataField="C_ESTADO_CIVIL.DSC_ESTADO_CIVIL" HeaderText="Estado Civil" SortExpression="C_ESTADO_CIVIL.DSC_ESTADO_CIVIL"  />
-            <asp:BoundField DataField="PER_TELEFONO" HeaderText="Tel&#233;fono" SortExpression="PER_TELEFONO" />
-            <asp:TemplateField HeaderText="Dona Organos" SortExpression="DONA_ORGANOS">
-                <ItemTemplate>
-                    <asp:Label ID="lblDonador" runat="server" Text='<%# (Boolean.Parse(Eval("DONA_ORGANOS") == null ? "false" : Eval("DONA_ORGANOS").ToString() ) ) ? "Donador" : "No donador" %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:BoundField DataField="PER_SENAS_PART" HeaderText="Señas Part" SortExpression="PER_SENAS_PART" />
-            <asp:BoundField DataField="PER_CORREO" HeaderText="Correo" SortExpression="PER_CORREO" />
-            
-            <asp:BoundField DataField="PER_NOTAS" HeaderText="Nota" SortExpression="PER_NOTAS" />
-            <asp:BoundField DataField="PER_IFE" HeaderText="IFE" SortExpression="PER_IFE" />
-            <%--        
-            
-            
-            <asp:BoundField DataField="ID_NACIONALIDAD" HeaderText="ID_NACIONALIDAD" SortExpression="ID_NACIONALIDAD" Visible="false" />
-            <asp:BoundField DataField="ID_TIPO_SANGRE" HeaderText="ID_TIPO_SANGRE" SortExpression="ID_TIPO_SANGRE" Visible="false" />
-            <asp:BoundField DataField="ID_INSTITUCION" HeaderText="ID_INSTITUCION" SortExpression="ID_INSTITUCION" Visible="false" />    
-            <asp:BoundField DataField="ID_ENTIDAD_NACIMIENTO" HeaderText="ID_ENTIDAD_NACIMIENTO" SortExpression="ID_ENTIDAD_NACIMIENTO" Visible="false" />
-            <asp:CheckBoxField DataField="PER_CURP_CORRECTO" HeaderText="PER_CURP_CORRECTO" SortExpression="PER_CURP_CORRECTO" Visible="false" />
-            <asp:CheckBoxField DataField="PER_RFC_CORRECTO" HeaderText="Rfc Correcto" SortExpression="PER_RFC_CORRECTO" Visible="false" />
-            <asp:CheckBoxField DataField="PER_IFE_CORRECTO" HeaderText="Ife Correcto" SortExpression="PER_IFE_CORRECTO" Visible="false" />
-            <asp:BoundField DataField="ID_TIPO_TELEFONO" HeaderText="ID_TIPO_TELEFONO" SortExpression="ID_TIPO_TELEFONO" Visible="false" />
-            <asp:BoundField DataField="PER_TELEFONO_LADA" HeaderText="PER_TELEFONO_LADA" SortExpression="PER_TELEFONO_LADA" Visible="false" />
-            <asp:BoundField DataField="FCH_CREACION" HeaderText="Creación" SortExpression="FCH_CREACION" Visible="false" />
-            <asp:CheckBoxField DataField="DATOS_VALIDADOS" HeaderText="DATOS_VALIDADOS" SortExpression="DATOS_VALIDADOS" Visible="false" />
-            <asp:BoundField DataField="ID_D_CURSO" HeaderText="ID_D_CURSO" SortExpression="ID_D_CURSO" Visible="false" />
-            <asp:BoundField DataField="PER_DOM_CP_SEPOMEX" HeaderText="Cp SEPOMEX" SortExpression="PER_DOM_CP_SEPOMEX" />
-            <asp:BoundField DataField="ID_PAIS_NACIMIENTO" HeaderText="ID_PAIS_NACIMIENTO" SortExpression="ID_PAIS_NACIMIENTO" Visible="false" />
-            <asp:BoundField DataField="ID_RESTRICCIONES_FISICAS" HeaderText="ID_RESTRICCIONES_FISICAS" SortExpression="ID_RESTRICCIONES_FISICAS" Visible="false" />
-            <asp:BoundField DataField="ID_BOCA" HeaderText="ID_BOCA" SortExpression="ID_BOCA" Visible="false" />
-            <asp:BoundField DataField="ID_CABELLO" HeaderText="ID_CABELLO" SortExpression="ID_CABELLO" Visible="false" />
-            <asp:BoundField DataField="ID_CARA" HeaderText="ID_CARA" SortExpression="ID_CARA" Visible="false" />
-            <asp:BoundField DataField="ID_COMPLEXION" HeaderText="ID_COMPLEXION" SortExpression="ID_COMPLEXION" Visible="false" />
-            <asp:BoundField DataField="ID_NARIZ" HeaderText="ID_NARIZ" SortExpression="ID_NARIZ" Visible="false" />
-            <asp:BoundField DataField="ID_OJOS" HeaderText="ID_OJOS" SortExpression="ID_OJOS" Visible="false" />
-            <asp:BoundField DataField="ID_PIEL" HeaderText="ID_PIEL" SortExpression="ID_PIEL" Visible="false" />
-            <asp:BoundField DataField="TUT_APELLIDO_PATERNO" HeaderText="Paterno Tutor" SortExpression="TUT_APELLIDO_PATERNO" />
-            <asp:BoundField DataField="TUT_APELLIDO_MATERNO" HeaderText="Materno Tutor" SortExpression="TUT_APELLIDO_MATERNO" />
-            <asp:BoundField DataField="TUT_NOMBRE" HeaderText="Nombre Tutor" SortExpression="TUT_NOMBRE" />
-            <asp:BoundField DataField="ora_modif_MvCrdl_prsIgu1" HeaderText="ora_modif_MvCrdl_prsIgu1" SortExpression="ora_modif_MvCrdl_prsIgu1" Visible="false" />
-            <asp:CheckBoxField DataField="ora_modif_MvCrdl_i1" HeaderText="ora_modif_MvCrdl_i1" SortExpression="ora_modif_MvCrdl_i1" Visible="false" />
-            <asp:BoundField DataField="ora_modif_MvCrdl_prsMig1" HeaderText="ora_modif_MvCrdl_prsMig1" SortExpression="ora_modif_MvCrdl_prsMig1" Visible="false" />
-            <asp:BoundField DataField="ora_modif_MvCrdl_FchAct" HeaderText="ora_modif_MvCrdl_FchAct" SortExpression="ora_modif_MvCrdl_FchAct" Visible="false" />
-            <asp:BoundField DataField="ora_modif_MvCrdl_FchHis" HeaderText="ora_modif_MvCrdl_FchHis" SortExpression="ora_modif_MvCrdl_FchHis" Visible="false" />
-            <asp:CheckBoxField DataField="ora_modif_MvCrdl_SeSusti" HeaderText="ora_modif_MvCrdl_SeSusti" SortExpression="ora_modif_MvCrdl_SeSusti" Visible="false" />--%>
-        </Columns>
+    <asp:GridView
+    ID="gvBusqueda"
+    runat="server"
+    AllowPaging="True"
+    AutoGenerateColumns="False"
+    DataKeyNames="IdPersona"
+    Visible="False"
+    OnSelectedIndexChanged="gvBusqueda_SelectedIndexChanged">
 
-<RowStyle CssClass="ClassRenglonResultados"></RowStyle>
-        <SelectedRowStyle BackColor="#FFFF99" />
-    </asp:GridView>
+    <Columns>
 
-    <asp:EntityDataSource ID="edsPersonas" runat="server" ConnectionString="name=SILCVEREntities" DefaultContainerName="SILCVEREntities" EnableFlattening="False"
-        EntitySetName="C_PERSONA" Include="C_COLONIA, C_COLONIA.C_DELEG_MUNICIPIO, C_ESTADO_CIVIL, C_PROFESION, C_RESTRICCIONES_FISICAS">
-    </asp:EntityDataSource>
+        <asp:TemplateField HeaderText="Foto">
+            <ItemTemplate>
+                <asp:ImageButton
+                    ID="Image1"
+                    runat="server"
+                    Height="100px"
+                    Width="80px"
+                    CommandName="Select"
+                    ImageUrl='<%# Page.ResolveUrl("~/Infrastructure/Handlers/ImageHandler.ashx?IdImagen=" + Eval("IdPersona")) %>' />
+            </ItemTemplate>
+        </asp:TemplateField>
 
+        <asp:BoundField
+            DataField="IdPersona"
+            HeaderText="Id"
+            Visible="False" />
+
+        <asp:BoundField
+            DataField="Nombre"
+            HeaderText="Nombre" />
+
+        <asp:BoundField
+            DataField="ApellidoPaterno"
+            HeaderText="Paterno" />
+
+        <asp:BoundField
+            DataField="ApellidoMaterno"
+            HeaderText="Materno" />
+
+        <asp:BoundField
+            DataField="RFC"
+            HeaderText="RFC" />
+
+        <asp:BoundField
+            DataField="CURP"
+            HeaderText="CURP" />
+
+        <asp:BoundField
+            DataField="Colonia"
+            HeaderText="Colonia" />
+
+        <asp:BoundField
+            DataField="Municipio"
+            HeaderText="Municipio" />
+
+    </Columns>
+
+    <RowStyle CssClass="ClassRenglonResultados" />
+
+    <SelectedRowStyle BackColor="#FFFF99" />
+
+</asp:GridView>
+    
     <asp:EntityDataSource ID="EntityDataSourcePersonaSeleccionada" runat="server" ConnectionString="name=SILCVEREntities" DefaultContainerName="SILCVEREntities" EnableFlattening="False"
         EntitySetName="C_PERSONA" Include="C_COLONIA, C_COLONIA.C_DELEG_MUNICIPIO, C_ESTADO_CIVIL, C_PROFESION, C_RESTRICCIONES_FISICAS, C_PERSONA_DOC" AutoGenerateWhereClause="True" EntityTypeFilter="" Select="" Where="" OnSelected="EntityDataSourcePersonaSeleccionada_Selected" >
         <WhereParameters>
-            <asp:ControlParameter ControlID="GridView1" Name="ID_PERSONA" PropertyName="SelectedValue" />
+            <asp:ControlParameter ControlID="gvBusqueda" Name="ID_PERSONA" PropertyName="SelectedValue" />
         </WhereParameters>
     </asp:EntityDataSource>
     <asp:Panel ID="Panel1" runat="server" Visible ="true" >
