@@ -7,95 +7,94 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">    
 
-           <div class="search-card">
+           <div class="busqueda-card">
 
-    <h2>
-        Consulta Histórica
-    </h2>
+    <h2>Consulta Histórica</h2>
 
     <p>
-        Busque por CURP, RFC o Nombre.
+        Busque por CURP, RFC, nombre o apellidos.
     </p>
 
     <asp:TextBox
         ID="txtBusqueda"
         runat="server"
-        CssClass="form-control"
-        Width="500px" />
-
-    <br />
-    <br />
+        CssClass="txt-busqueda" />
 
     <asp:Button
         ID="btnBuscar"
         runat="server"
         Text="Buscar"
+        CssClass="btn-buscar"
         OnClick="btnBuscar_Click" />
 
-</div>     
+</div>
     
 
     <asp:GridView
     ID="gvBusqueda"
     runat="server"
-    AllowPaging="True"
     AutoGenerateColumns="False"
     DataKeyNames="IdPersona"
+    CssClass="grid-modern"
+    AllowPaging="True"
     Visible="False"
     OnSelectedIndexChanged="gvBusqueda_SelectedIndexChanged">
 
     <Columns>
 
-        <asp:TemplateField HeaderText="Foto">
+        <asp:TemplateField HeaderText="">
             <ItemTemplate>
+
                 <asp:ImageButton
-                    ID="Image1"
+                    ID="imgPersona"
                     runat="server"
-                    Height="100px"
-                    Width="80px"
+                    Height="80px"
+                    Width="65px"
                     CommandName="Select"
+                    CssClass="foto-persona"
                     ImageUrl='<%# Page.ResolveUrl("~/Infrastructure/Handlers/ImageHandler.ashx?IdImagen=" + Eval("IdPersona")) %>' />
+
             </ItemTemplate>
         </asp:TemplateField>
 
-        <asp:BoundField
-            DataField="IdPersona"
-            HeaderText="Id"
-            Visible="False" />
+        <asp:TemplateField HeaderText="Ciudadano">
+            <ItemTemplate>
 
-        <asp:BoundField
-            DataField="Nombre"
-            HeaderText="Nombre" />
+                <div class="persona-nombre">
+                    <%# Eval("Nombre") %>
+                    <%# Eval("ApellidoPaterno") %>
+                    <%# Eval("ApellidoMaterno") %>
+                </div>
 
-        <asp:BoundField
-            DataField="ApellidoPaterno"
-            HeaderText="Paterno" />
+                <div class="persona-rfc">
+                    RFC: <%# Eval("RFC") %>
+                </div>
 
-        <asp:BoundField
-            DataField="ApellidoMaterno"
-            HeaderText="Materno" />
+                <div class="persona-curp">
+                    CURP: <%# Eval("CURP") %>
+                </div>
 
-        <asp:BoundField
-            DataField="RFC"
-            HeaderText="RFC" />
-
-        <asp:BoundField
-            DataField="CURP"
-            HeaderText="CURP" />
-
-        <asp:BoundField
-            DataField="Colonia"
-            HeaderText="Colonia" />
+            </ItemTemplate>
+        </asp:TemplateField>
 
         <asp:BoundField
             DataField="Municipio"
             HeaderText="Municipio" />
 
+        <asp:TemplateField HeaderText="">
+            <ItemTemplate>
+
+                <asp:LinkButton
+                    ID="btnSeleccionar"
+                    runat="server"
+                    CommandName="Select"
+                    CssClass="btn-detalle"
+                    Text="Ver detalle" />
+
+            </ItemTemplate>
+        </asp:TemplateField>
+
     </Columns>
-
-    <RowStyle CssClass="ClassRenglonResultados" />
-
-    <SelectedRowStyle BackColor="#FFFF99" />
 
 </asp:GridView>
     
@@ -309,5 +308,5 @@
 
         </ItemTemplate>
     </asp:FormView>--%>
-    <br />
+    
 </asp:Content>
