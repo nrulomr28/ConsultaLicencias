@@ -1,0 +1,607 @@
+﻿/* =====================================================
+   CONSULTA DE LICENCIAS
+   SSP VERACRUZ
+   ===================================================== */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+/* =====================================================
+   HEADER INSTITUCIONAL
+   ===================================================== */
+
+.header {
+    position: relative;
+    background: linear-gradient( rgba(122,32,48,.65), rgba(122,32,48,.65) ), url('../Images/plecas1.png') repeat-x center top;
+    color: white;
+    padding: 35px 40px;
+    border-bottom: 4px solid #c9a227;
+}
+
+.header-title {
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: -.5px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.15);
+    margin-bottom: 8px;
+    color: #611927;
+}
+
+.header-subtitle {
+    font-size: 16px;
+    opacity: .95;
+    letter-spacing: .3px;
+    color: #7a2030;
+}
+
+/* =====================================================
+   CONTENEDOR
+   ===================================================== */
+
+.main-container {
+    min-height: calc(100vh - 180px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+/* =====================================================
+   LOGIN
+   ===================================================== */
+
+.login-card {
+    width: 460px;
+    box-shadow: 0 16px 40px rgba(0,0,0,.15);
+    border-top: 5px solid #7a2030;
+}
+
+.login-card-header {
+    background: #7a2030;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+    .login-card-header h3 {
+        margin: 0;
+        font-size: 22px;
+    }
+
+.login-card-body {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.login-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.login-input {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+    .login-input:focus {
+        outline: none;
+        border-color: #7a2030;
+        box-shadow: 0 0 0 3px rgba(122,32,48,.15);
+    }
+
+/* =====================================================
+   BOTONES
+   ===================================================== */
+
+.btn-login {
+    width: 100%;
+    height: 44px;
+    border: none;
+    border-radius: 8px;
+    background: #7a2030;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    .btn-login:hover {
+        background: #611927;
+    }
+
+/* =====================================================
+   MENSAJES
+   ===================================================== */
+
+.validation-message,
+.error-message {
+    color: #dc2626;
+}
+
+/* =====================================================
+   TARJETAS
+   ===================================================== */
+
+.page-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+
+.page-title {
+    color: #7a2030;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* =====================================================
+   TABLAS
+   ===================================================== */
+
+.table thead th {
+    background: #7a2030;
+    color: white;
+    border-color: #7a2030;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.footer {
+    background: #611927;
+    color: white;
+    text-align: center;
+    padding: 24px;
+    border-top: 4px solid #c9a227;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width:768px) {
+
+    .header-title {
+        font-size: 24px;
+    }
+
+    .header-subtitle {
+        font-size: 12px;
+    }
+
+    .login-card {
+        width: 95%;
+    }
+}
+
+.grid-modern {
+    width: 96%;
+    margin: 0 auto 30px auto;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+    .grid-modern th {
+        background: #0b2d52;
+        color: white;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .grid-modern td {
+        padding: 10px;
+        border-bottom: 1px solid #e5e5e5;
+        vertical-align: middle;
+    }
+
+    .grid-modern tr:hover {
+        background: #f5f9ff;
+    }
+
+.foto-persona {
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.persona-nombre {
+    font-size: 16px;
+    font-weight: 700;
+    color: #7a2030;
+    margin-bottom: 6px;
+}
+
+.persona-rfc,
+.persona-curp {
+    color: #666;
+    font-size: 12px;
+    margin-top: 4px;
+}
+.btn-detalle {
+    background: #0b2d52;
+    color: white !important;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+    .btn-detalle:hover {
+        background: #16487f;
+    }
+
+.busqueda-card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.txt-busqueda {
+    width: 400px;
+    padding: 10px;
+}
+
+.btn-buscar {
+    background: #0b2d52;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.persona-direccion {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.acciones-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 140px;
+}
+
+.btn-detalle,
+.btn-descargar {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+}
+
+.btn-detalle {
+    background: #0f2f5f;
+    color: white !important;
+}
+
+    .btn-detalle:hover {
+        background: #0b2347;
+    }
+
+.btn-descargar {
+    display: block;
+    background: #7a2030;
+    color: white !important;
+}
+
+    .btn-descargar:hover {
+        background: #611927;
+    }
+
+.persona-rfc,
+.persona-curp {
+    margin-top: 4px;
+}
+
+
+.btn-descargar {
+    display: block;
+}
+
+
+/* =====================================================
+   LAUNCHER
+   ===================================================== */
+
+.launcher-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+
+.launcher-card {
+    width: 420px;
+    background: white;
+    border-radius: 12px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+.launcher-icon {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.launcher-title {
+    color: #7a2030;
+    margin-bottom: 15px;
+}
+
+.launcher-description {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.btn-launcher {
+    display: inline-block;
+    background: #7a2030;
+    color: white !important;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+    .btn-launcher:hover {
+        background: #611927;
+    }
+
+
+/* ==========================================
+   BUSCADOR HISTÓRICO
+   ========================================== */
+
+.search-card {
+    width: 900px;
+    margin: -35px auto 40px auto;
+    position: relative;
+    z-index: 10;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 35px;
+    border-top: 5px solid #7a2030;
+    box-shadow: 0 12px 30px rgba(0,0,0,.12), 0 2px 8px rgba(0,0,0,.06);
+    transition: transform .20s ease, box-shadow .20s ease;
+}
+
+    .search-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 40px rgba(0,0,0,.15), 0 4px 12px rgba(0,0,0,.08);
+    }
+
+.search-title {
+    margin: 0;
+    color: #611927;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.search-subtitle {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: #6b7280;
+}
+
+.search-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.search-input {
+    flex: 1;
+    height: 48px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 0 15px;
+    font-size: 15px;
+}
+
+    .search-input:focus {
+        outline: none;
+        border-color: #7a2030;
+        box-shadow: 0 0 0 3px rgba(122,32,48,.15);
+    }
+
+.btn-search {
+    height: 48px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 8px;
+    background: #7a2030;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    .btn-search:hover {
+        background: #611927;
+    }
+
+
+
+.resultado-count {
+    width: 900px;
+    margin: 0 auto 15px auto;
+    display: block;
+    color: #611927;
+    font-weight: 600;
+}
+
+.grid-pager {
+    text-align: center;
+    padding: 15px;
+}
+
+    .grid-pager a {
+        padding: 6px 12px;
+        margin: 0 3px;
+        border-radius: 4px;
+        background: #7a2030;
+        color: white;
+        text-decoration: none;
+    }
+
+    .grid-pager span {
+        padding: 6px 12px;
+        margin: 0 3px;
+        border-radius: 4px;
+        background: #611927;
+        color: white;
+        font-weight: bold;
+    }
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-badge {
+    background: rgba(122,32,48,.85);
+    border: 1px solid rgba(255,255,255,.35);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+
+/* =====================================================
+   RESPONSIVE CONSULTA HISTORICA
+   ===================================================== */
+
+@media (max-width: 992px) {
+
+    .search-card {
+        width: calc(100% - 30px);
+        margin: 20px auto;
+    }
+
+    .resultado-count {
+        width: calc(100% - 30px);
+    }
+
+    .search-row {
+        flex-direction: column;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .btn-search {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .header-badge {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
+.header-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.btn-logout {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.25);
+    color: white !important;
+}
+
+    .btn-logout:hover {
+        background: rgba(255,255,255,.25);
+    }
+
+.footer-version {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    opacity: .85;
+}
+
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.85);
+    z-index: 99999;
+}
+
+.loading-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #7a2030;
+    font-weight: 600;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px auto;
+    border: 5px solid #ddd;
+    border-top: 5px solid #7a2030;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

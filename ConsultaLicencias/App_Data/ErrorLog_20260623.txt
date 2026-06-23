@@ -1,0 +1,19 @@
+
+==================================================
+Fecha        : 2026-06-23 15:14:54
+StatusCode   : 500
+URL          : http://localhost:29731/Consultas/ConsultaHistorico.aspx
+Usuario      : Consulta_ARCOIRIS
+IP           : ::1
+Excepcion    : System.Web.HttpUnhandledException
+Mensaje      : Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.
+Inner        : An error occurred while executing the command definition. See the inner exception for details.
+StackTrace   :    en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest()
+   en System.Web.UI.Page.ProcessRequest(HttpContext context)
+   en ASP.consultas_consultahistorico_aspx.ProcessRequest(HttpContext context) en c:\Users\rmestizor\AppData\Local\Temp\Temporary ASP.NET Files\vs\d9175049\49e5671\App_Web_tltyairz.1.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)

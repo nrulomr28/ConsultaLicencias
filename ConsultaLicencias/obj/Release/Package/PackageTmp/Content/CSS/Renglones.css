@@ -1,0 +1,81 @@
+﻿.ClassRenglon
+{
+    width: 100%;
+    border-collapse:collapse;
+    border: none;
+    border-radius: 10px;
+    background-color:#E6E6E6;
+    padding: 5px;    
+    border-spacing:3px;
+}
+    .ClassRenglon tbody tr th
+    {
+        text-align: center;
+        font-size: 12px;
+        color: #FFF;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #4D4D4D;
+        border-spacing:3px;
+        height: 30px;
+    }
+        .ClassRenglon tbody tr th a
+        {
+            font-family: Arial;
+            color: #FFF;
+            text-decoration: underline;
+        }
+.ClassRenglonResultados
+{
+    background-color: #E6E6E6;
+    border-bottom: 1px dotted #808080;
+}
+        .ClassRenglonResultados td
+        {
+            font-family: Arial;
+            text-align: center;
+            font-size: 14px;
+            color: #000;
+            text-transform: uppercase;
+            padding: 5px;
+            height: 30px;
+        }
+    .ClassRenglonResultados:Hover{ background-color: #DDDDDD; }
+    .ClassPunteado{ border-right: 1px dotted #808080; }
+
+.ClassRenglonGrid
+{
+    width: 960px;    
+    border-collapse:collapse;
+    border: none;
+}
+    .ClassRenglonGrid tbody tr th
+        {
+            text-align: center;
+            font-size: 11px;
+            color: #353234;
+            font-weight: bold;
+            text-transform: uppercase;
+            background-color: transparent;
+        }
+            .ClassRenglonGrid tbody tr th a
+            {
+                color: #353234;
+                text-decoration: underline;
+            }
+
+.content-wrapper {
+    background-color: #D9DADC !important;
+}
+
+.ClassFichaEmpleado
+{
+    border-bottom: 2px solid #4D4D4D;
+}
+
+.ClassFichaEmpleadoCeldas
+{
+    border-bottom: 1px dashed #808080;
+}
+.ClassFichaEmpleadoCeldas td { font-weight:bold; color: #000; }
+.ClassFichaEmpleadoCeldas td span{ font-weight: normal; color: #4D4D4D; }

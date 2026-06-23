@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SILCVERModelStoreContainer" CdmEntityContainer="SILCVEREntities">
+    <EntitySetMapping Name="C_PERSONA">
+      <EntityTypeMapping TypeName="SILCVERModel.C_PERSONA">
+        <MappingFragment StoreEntitySet="C_PERSONA">
+          <ScalarProperty Name="PER_PESO" ColumnName="PER_PESO" />
+          <ScalarProperty Name="ZZ_MIGRA_IP104040" ColumnName="ZZ_MIGRA_IP104040" />
+          <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+          <ScalarProperty Name="PER_NOMBRE" ColumnName="PER_NOMBRE" />
+          <ScalarProperty Name="PER_APELLIDO_PATERNO" ColumnName="PER_APELLIDO_PATERNO" />
+          <ScalarProperty Name="PER_APELLIDO_MATERNO" ColumnName="PER_APELLIDO_MATERNO" />
+          <ScalarProperty Name="PER_FCH_NACIMIENTO" ColumnName="PER_FCH_NACIMIENTO" />
+          <ScalarProperty Name="PER_RFC" ColumnName="PER_RFC" />
+          <ScalarProperty Name="PER_CURP" ColumnName="PER_CURP" />
+          <ScalarProperty Name="PER_DOM_CALLE" ColumnName="PER_DOM_CALLE" />
+          <ScalarProperty Name="PER_DOM_NUM_EXT" ColumnName="PER_DOM_NUM_EXT" />
+          <ScalarProperty Name="PER_DOM_NUM_INT" ColumnName="PER_DOM_NUM_INT" />
+          <ScalarProperty Name="PER_DOM_REF_ADIC" ColumnName="PER_DOM_REF_ADIC" />
+          <ScalarProperty Name="PER_DOM_CP" ColumnName="PER_DOM_CP" />
+          <ScalarProperty Name="ID_COLONIA" ColumnName="ID_COLONIA" />
+          <ScalarProperty Name="ID_DELEG_MUNICIPIO" ColumnName="ID_DELEG_MUNICIPIO" />
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="ID_SEXO" ColumnName="ID_SEXO" />
+          <ScalarProperty Name="ID_ESTADO_CIVIL" ColumnName="ID_ESTADO_CIVIL" />
+          <ScalarProperty Name="PER_IFE" ColumnName="PER_IFE" />
+          <ScalarProperty Name="ID_NACIONALIDAD" ColumnName="ID_NACIONALIDAD" />
+          <ScalarProperty Name="ID_TIPO_SANGRE" ColumnName="ID_TIPO_SANGRE" />
+          <ScalarProperty Name="ID_INSTITUCION" ColumnName="ID_INSTITUCION" />
+          <ScalarProperty Name="PER_TELEFONO" ColumnName="PER_TELEFONO" />
+          <ScalarProperty Name="PER_NOTAS" ColumnName="PER_NOTAS" />
+          <ScalarProperty Name="ID_ENTIDAD_NACIMIENTO" ColumnName="ID_ENTIDAD_NACIMIENTO" />
+          <ScalarProperty Name="PER_DOM_CP_SEPOMEX" ColumnName="PER_DOM_CP_SEPOMEX" />
+          <ScalarProperty Name="PER_CURP_CORRECTO" ColumnName="PER_CURP_CORRECTO" />
+          <ScalarProperty Name="PER_RFC_CORRECTO" ColumnName="PER_RFC_CORRECTO" />
+          <ScalarProperty Name="PER_IFE_CORRECTO" ColumnName="PER_IFE_CORRECTO" />
+          <ScalarProperty Name="PER_CORREO" ColumnName="PER_CORREO" />
+          <ScalarProperty Name="ID_TIPO_TELEFONO" ColumnName="ID_TIPO_TELEFONO" />
+          <ScalarProperty Name="PER_TELEFONO_LADA" ColumnName="PER_TELEFONO_LADA" />
+          <ScalarProperty Name="FCH_CREACION" ColumnName="FCH_CREACION" />
+          <ScalarProperty Name="DATOS_VALIDADOS" ColumnName="DATOS_VALIDADOS" />
+          <ScalarProperty Name="ID_D_CURSO" ColumnName="ID_D_CURSO" />
+          <ScalarProperty Name="ID_PROFESION" ColumnName="ID_PROFESION" />
+          <ScalarProperty Name="ID_PAIS_NACIMIENTO" ColumnName="ID_PAIS_NACIMIENTO" />
+          <ScalarProperty Name="DONA_ORGANOS" ColumnName="DONA_ORGANOS" />
+          <ScalarProperty Name="ID_RESTRICCIONES_FISICAS" ColumnName="ID_RESTRICCIONES_FISICAS" />
+          <ScalarProperty Name="ID_BOCA" ColumnName="ID_BOCA" />
+          <ScalarProperty Name="ID_CABELLO" ColumnName="ID_CABELLO" />
+          <ScalarProperty Name="ID_CARA" ColumnName="ID_CARA" />
+          <ScalarProperty Name="ID_COMPLEXION" ColumnName="ID_COMPLEXION" />
+          <ScalarProperty Name="ID_NARIZ" ColumnName="ID_NARIZ" />
+          <ScalarProperty Name="ID_OJOS" ColumnName="ID_OJOS" />
+          <ScalarProperty Name="ID_PIEL" ColumnName="ID_PIEL" />
+          <ScalarProperty Name="PER_ESTATURA" ColumnName="PER_ESTATURA" />
+          <ScalarProperty Name="PER_SENAS_PART" ColumnName="PER_SENAS_PART" />
+          <ScalarProperty Name="TUT_APELLIDO_PATERNO" ColumnName="TUT_APELLIDO_PATERNO" />
+          <ScalarProperty Name="TUT_APELLIDO_MATERNO" ColumnName="TUT_APELLIDO_MATERNO" />
+          <ScalarProperty Name="TUT_NOMBRE" ColumnName="TUT_NOMBRE" />
+          <ScalarProperty Name="ora_modif_MvCrdl_prsIgu1" ColumnName="ora_modif_MvCrdl_prsIgu1" />
+          <ScalarProperty Name="ora_modif_MvCrdl_i1" ColumnName="ora_modif_MvCrdl_i1" />
+          <ScalarProperty Name="ora_modif_MvCrdl_prsMig1" ColumnName="ora_modif_MvCrdl_prsMig1" />
+          <ScalarProperty Name="ora_modif_MvCrdl_FchAct" ColumnName="ora_modif_MvCrdl_FchAct" />
+          <ScalarProperty Name="ora_modif_MvCrdl_FchHis" ColumnName="ora_modif_MvCrdl_FchHis" />
+          <ScalarProperty Name="ora_modif_MvCrdl_SeSusti" ColumnName="ora_modif_MvCrdl_SeSusti" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_PERSONA_DOC">
+      <EntityTypeMapping TypeName="SILCVERModel.C_PERSONA_DOC">
+        <MappingFragment StoreEntitySet="C_PERSONA_DOC">
+          <ScalarProperty Name="ZZ_MIGRA_IP104040" ColumnName="ZZ_MIGRA_IP104040" />
+          <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+          <ScalarProperty Name="ID_TIPO_DOCUMENTO" ColumnName="ID_TIPO_DOCUMENTO" />
+          <ScalarProperty Name="DOC_IMAGEN" ColumnName="DOC_IMAGEN" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
+          <ScalarProperty Name="ora_modif_docper_i" ColumnName="ora_modif_docper_i" />
+          <ScalarProperty Name="ora_modif_clvdcmprs_ref" ColumnName="ora_modif_clvdcmprs_ref" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_PERSONA_HUELLAS">
+      <EntityTypeMapping TypeName="SILCVERModel.C_PERSONA_HUELLAS">
+        <MappingFragment StoreEntitySet="C_PERSONA_HUELLAS">
+          <ScalarProperty Name="FG" ColumnName="FG" />
+          <ScalarProperty Name="ZZ_MIGRA_IP104040" ColumnName="ZZ_MIGRA_IP104040" />
+          <ScalarProperty Name="CONTROL_HUELLAS" ColumnName="CONTROL_HUELLAS" />
+          <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+          <ScalarProperty Name="HUELLA_DER1_PK" ColumnName="HUELLA_DER1_PK" />
+          <ScalarProperty Name="HUELLA_DER2_PK" ColumnName="HUELLA_DER2_PK" />
+          <ScalarProperty Name="HUELLA_DER3_PK" ColumnName="HUELLA_DER3_PK" />
+          <ScalarProperty Name="HUELLA_DER4_PK" ColumnName="HUELLA_DER4_PK" />
+          <ScalarProperty Name="HUELLA_DER5_PK" ColumnName="HUELLA_DER5_PK" />
+          <ScalarProperty Name="HUELLA_IZQ1_PK" ColumnName="HUELLA_IZQ1_PK" />
+          <ScalarProperty Name="HUELLA_IZQ2_PK" ColumnName="HUELLA_IZQ2_PK" />
+          <ScalarProperty Name="HUELLA_IZQ3_PK" ColumnName="HUELLA_IZQ3_PK" />
+          <ScalarProperty Name="HUELLA_IZQ4_PK" ColumnName="HUELLA_IZQ4_PK" />
+          <ScalarProperty Name="HUELLA_IZQ5_PK" ColumnName="HUELLA_IZQ5_PK" />
+          <ScalarProperty Name="HUELLA_DER1_WSQ" ColumnName="HUELLA_DER1_WSQ" />
+          <ScalarProperty Name="HUELLA_DER2_WSQ" ColumnName="HUELLA_DER2_WSQ" />
+          <ScalarProperty Name="HUELLA_DER3_WSQ" ColumnName="HUELLA_DER3_WSQ" />
+          <ScalarProperty Name="HUELLA_DER4_WSQ" ColumnName="HUELLA_DER4_WSQ" />
+          <ScalarProperty Name="HUELLA_DER5_WSQ" ColumnName="HUELLA_DER5_WSQ" />
+          <ScalarProperty Name="HUELLA_IZQ1_WSQ" ColumnName="HUELLA_IZQ1_WSQ" />
+          <ScalarProperty Name="HUELLA_IZQ2_WSQ" ColumnName="HUELLA_IZQ2_WSQ" />
+          <ScalarProperty Name="HUELLA_IZQ3_WSQ" ColumnName="HUELLA_IZQ3_WSQ" />
+          <ScalarProperty Name="HUELLA_IZQ4_WSQ" ColumnName="HUELLA_IZQ4_WSQ" />
+          <ScalarProperty Name="HUELLA_IZQ5_WSQ" ColumnName="HUELLA_IZQ5_WSQ" />
+          <ScalarProperty Name="HUELLA_SLAP1_WSQ" ColumnName="HUELLA_SLAP1_WSQ" />
+          <ScalarProperty Name="HUELLA_SLAP2_WSQ" ColumnName="HUELLA_SLAP2_WSQ" />
+          <ScalarProperty Name="HUELLA_SLAP3_WSQ" ColumnName="HUELLA_SLAP3_WSQ" />
+          <ScalarProperty Name="HUELLA_DER1_ESTATUS" ColumnName="HUELLA_DER1_ESTATUS" />
+          <ScalarProperty Name="HUELLA_DER2_ESTATUS" ColumnName="HUELLA_DER2_ESTATUS" />
+          <ScalarProperty Name="HUELLA_DER3_ESTATUS" ColumnName="HUELLA_DER3_ESTATUS" />
+          <ScalarProperty Name="HUELLA_DER4_ESTATUS" ColumnName="HUELLA_DER4_ESTATUS" />
+          <ScalarProperty Name="HUELLA_DER5_ESTATUS" ColumnName="HUELLA_DER5_ESTATUS" />
+          <ScalarProperty Name="HUELLA_IZQ1_ESTATUS" ColumnName="HUELLA_IZQ1_ESTATUS" />
+          <ScalarProperty Name="HUELLA_IZQ2_ESTATUS" ColumnName="HUELLA_IZQ2_ESTATUS" />
+          <ScalarProperty Name="HUELLA_IZQ3_ESTATUS" ColumnName="HUELLA_IZQ3_ESTATUS" />
+          <ScalarProperty Name="HUELLA_IZQ4_ESTATUS" ColumnName="HUELLA_IZQ4_ESTATUS" />
+          <ScalarProperty Name="HUELLA_IZQ5_ESTATUS" ColumnName="HUELLA_IZQ5_ESTATUS" />
+          <ScalarProperty Name="ora_modif_wsq_u1" ColumnName="ora_modif_wsq_u1" />
+          <ScalarProperty Name="ora_modif_wsq_u2" ColumnName="ora_modif_wsq_u2" />
+          <ScalarProperty Name="ora_modif_wsq_u3" ColumnName="ora_modif_wsq_u3" />
+          <ScalarProperty Name="ora_modif_wsq_i1" ColumnName="ora_modif_wsq_i1" />
+          <ScalarProperty Name="ora_modif_pk_u1" ColumnName="ora_modif_pk_u1" />
+          <ScalarProperty Name="ora_modif_pk_u2" ColumnName="ora_modif_pk_u2" />
+          <ScalarProperty Name="ora_modif_pk_u3" ColumnName="ora_modif_pk_u3" />
+          <ScalarProperty Name="ora_modif_pk_i1" ColumnName="ora_modif_pk_i1" />
+          <ScalarProperty Name="ora_modif_status_der" ColumnName="ora_modif_status_der" />
+          <ScalarProperty Name="ora_modif_status_izq" ColumnName="ora_modif_status_izq" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_PERSONA_IMG">
+      <EntityTypeMapping TypeName="SILCVERModel.C_PERSONA_IMG">
+        <MappingFragment StoreEntitySet="C_PERSONA_IMG">
+          <ScalarProperty Name="FG" ColumnName="FG" />
+          <ScalarProperty Name="ZZ_MIGRA_IP104040" ColumnName="ZZ_MIGRA_IP104040" />
+          <ScalarProperty Name="CONTROL_IMG" ColumnName="CONTROL_IMG" />
+          <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+          <ScalarProperty Name="ID_TIPO_LICENCIA" ColumnName="ID_TIPO_LICENCIA" />
+          <ScalarProperty Name="IMG_FOTO" ColumnName="IMG_FOTO" />
+          <ScalarProperty Name="IMG_FOTO_CAMEO" ColumnName="IMG_FOTO_CAMEO" />
+          <ScalarProperty Name="IMG_FOTO_GHOST" ColumnName="IMG_FOTO_GHOST" />
+          <ScalarProperty Name="IMG_FIRMA" ColumnName="IMG_FIRMA" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="FEC_CREACION" ColumnName="FEC_CREACION" />
+          <ScalarProperty Name="ora_modif_foto_u" ColumnName="ora_modif_foto_u" />
+          <ScalarProperty Name="ora_modif_firma_u" ColumnName="ora_modif_firma_u" />
+          <ScalarProperty Name="ora_modif_fyf_i" ColumnName="ora_modif_fyf_i" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_COLONIA">
+      <EntityTypeMapping TypeName="SILCVERModel.C_COLONIA">
+        <MappingFragment StoreEntitySet="C_COLONIA">
+          <ScalarProperty Name="ZZ_MIGRA_IP104040" ColumnName="ZZ_MIGRA_IP104040" />
+          <ScalarProperty Name="NUM_CP" ColumnName="NUM_CP" />
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="ID_DELEG_MUNICIPIO" ColumnName="ID_DELEG_MUNICIPIO" />
+          <ScalarProperty Name="DSC_COLONIA" ColumnName="DSC_COLONIA" />
+          <ScalarProperty Name="ID_COLONIA" ColumnName="ID_COLONIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_DELEG_MUNICIPIO">
+      <EntityTypeMapping TypeName="SILCVERModel.C_DELEG_MUNICIPIO">
+        <MappingFragment StoreEntitySet="C_DELEG_MUNICIPIO">
+          <ScalarProperty Name="ZZ_MIGRA_IP104040" ColumnName="ZZ_MIGRA_IP104040" />
+          <ScalarProperty Name="ID_C4" ColumnName="ID_C4" />
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="DSC_DELEG_MUNICIPIO" ColumnName="DSC_DELEG_MUNICIPIO" />
+          <ScalarProperty Name="ID_DELEG_MUNICIPIO" ColumnName="ID_DELEG_MUNICIPIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_ESTADO_CIVIL">
+      <EntityTypeMapping TypeName="SILCVERModel.C_ESTADO_CIVIL">
+        <MappingFragment StoreEntitySet="C_ESTADO_CIVIL">
+          <ScalarProperty Name="ID_ESTATUS" ColumnName="ID_ESTATUS" />
+          <ScalarProperty Name="DSC_ESTADO_CIVIL" ColumnName="DSC_ESTADO_CIVIL" />
+          <ScalarProperty Name="ID_ESTADO_CIVIL" ColumnName="ID_ESTADO_CIVIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_PROFESION">
+      <EntityTypeMapping TypeName="SILCVERModel.C_PROFESION">
+        <MappingFragment StoreEntitySet="C_PROFESION">
+          <ScalarProperty Name="DSC_PROFESION" ColumnName="DSC_PROFESION" />
+          <ScalarProperty Name="ID_PROFESION" ColumnName="ID_PROFESION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_RESTRICCIONES_FISICAS">
+      <EntityTypeMapping TypeName="SILCVERModel.C_RESTRICCIONES_FISICAS">
+        <MappingFragment StoreEntitySet="C_RESTRICCIONES_FISICAS">
+          <ScalarProperty Name="DSC_RESTRICCIONES_FISICAS" ColumnName="DSC_RESTRICCIONES_FISICAS" />
+          <ScalarProperty Name="ID_RESTRICCIONES_FISICAS" ColumnName="ID_RESTRICCIONES_FISICAS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vLicencias_NEW">
+      <EntityTypeMapping TypeName="SILCVERModel.vLicencias_NEW">
+        <MappingFragment StoreEntitySet="vLicencias_NEW">
+          <ScalarProperty Name="EnrollmentTime" ColumnName="EnrollmentTime" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="CODPOSTAL" ColumnName="CODPOSTAL" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="MUNICIPIO" ColumnName="MUNICIPIO" />
+          <ScalarProperty Name="MUN_ID" ColumnName="MUN_ID" />
+          <ScalarProperty Name="ENTIDAD_CONDUCTOR" ColumnName="ENTIDAD_CONDUCTOR" />
+          <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="CURP" ColumnName="CURP" />
+          <ScalarProperty Name="FECHANACIM" ColumnName="FECHANACIM" />
+          <ScalarProperty Name="APELLIDOMA" ColumnName="APELLIDOMA" />
+          <ScalarProperty Name="APELLIDOPA" ColumnName="APELLIDOPA" />
+          <ScalarProperty Name="NOMBRECOND" ColumnName="NOMBRECOND" />
+          <ScalarProperty Name="RESTRICCION" ColumnName="RESTRICCION" />
+          <ScalarProperty Name="SANGRE" ColumnName="SANGRE" />
+          <ScalarProperty Name="DELEGACION" ColumnName="DELEGACION" />
+          <ScalarProperty Name="ENTIDAD_ID" ColumnName="ENTIDAD_ID" />
+          <ScalarProperty Name="OFIEXP" ColumnName="OFIEXP" />
+          <ScalarProperty Name="PERIODO" ColumnName="PERIODO" />
+          <ScalarProperty Name="NO_LICENCI" ColumnName="NO_LICENCI" />
+          <ScalarProperty Name="TIPO_DE_LIC" ColumnName="TIPO_DE_LIC" />
+          <ScalarProperty Name="VENCIMIENT" ColumnName="VENCIMIENT" />
+          <ScalarProperty Name="EXPEDICION" ColumnName="EXPEDICION" />
+          <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+          <ScalarProperty Name="ID_ALTERNA" ColumnName="ID_ALTERNA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vLicencias_Imagen_New">
+      <EntityTypeMapping TypeName="SILCVERModel.vLicencias_Imagen_New">
+        <MappingFragment StoreEntitySet="vLicencias_Imagen_New">
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="IMAGENKEY" ColumnName="IMAGENKEY" />
+          <ScalarProperty Name="OFIEXP" ColumnName="OFIEXP" />
+          <ScalarProperty Name="VENCIMIENT" ColumnName="VENCIMIENT" />
+          <ScalarProperty Name="Expedicion" ColumnName="Expedicion" />
+          <ScalarProperty Name="NO_LICENCI" ColumnName="NO_LICENCI" />
+          <ScalarProperty Name="DELEGACION" ColumnName="DELEGACION" />
+          <ScalarProperty Name="ENTIDAD_ID" ColumnName="ENTIDAD_ID" />
+          <ScalarProperty Name="ID_TIPO_IMAGEN" ColumnName="ID_TIPO_IMAGEN" />
+          <ScalarProperty Name="ID_ALTERNA" ColumnName="ID_ALTERNA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vLicencias_UNION">
+      <EntityTypeMapping TypeName="SILCVERModel.vLicencias_UNION">
+        <MappingFragment StoreEntitySet="vLicencias_UNION">
+          <ScalarProperty Name="Busqueda" ColumnName="Busqueda" />
+          <ScalarProperty Name="ESTATUS_REGISTRO" ColumnName="ESTATUS_REGISTRO" />
+          <ScalarProperty Name="FECHA_REGISTRO" ColumnName="FECHA_REGISTRO" />
+          <ScalarProperty Name="CURP" ColumnName="CURP" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="FCH_NACIMIENTO" ColumnName="FCH_NACIMIENTO" />
+          <ScalarProperty Name="APELLIDO_MATERNO" ColumnName="APELLIDO_MATERNO" />
+          <ScalarProperty Name="APELLIDO_PATERNO" ColumnName="APELLIDO_PATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ID_ALTERNA" ColumnName="ID_ALTERNA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

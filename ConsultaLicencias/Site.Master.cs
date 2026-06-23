@@ -67,7 +67,12 @@ namespace ConsultaLicencias
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lnkCerrarSesion.Visible =
+                    Context.User != null
+                    &&
+                    Context.User.Identity != null
+                    &&
+                    Context.User.Identity.IsAuthenticated;
         }
     }
 }

@@ -7,9 +7,22 @@ namespace ConsultaLicencias.Acceso
 {
     public partial class _Default : Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Load(
+           object sender,
+           EventArgs e)
         {
-            //Server.Transfer("~/Consultas/ConsultaHistorico.aspx");
+            if (!IsPostBack
+            &&
+            User != null
+            &&
+            User.Identity != null
+            &&
+            User.Identity.IsAuthenticated)
+            {
+                Response.Redirect(
+                    "~/Consultas/ConsultaHistorico.aspx",
+                    false);
+            }
         }
     }
 }
