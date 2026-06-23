@@ -8,12 +8,16 @@ using System.Web.UI.WebControls;
 
 namespace ConsultaLicencias.Account
 {
-    public partial class FrmLogout : System.Web.UI.Page
+    public partial class Logout : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             FormsAuthentication.SignOut();
-            Response.Redirect("~/");
+            Response.Redirect(
+                        "/Acceso/Default.aspx",
+                        false);
+
+            Context.ApplicationInstance.CompleteRequest();
         }
     }
 }

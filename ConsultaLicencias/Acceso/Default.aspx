@@ -24,7 +24,7 @@
                             ID="Login1"
                             runat="server"
                             DisplayRememberMe="False"
-                            DestinationPageUrl="~/Acceso/Default.aspx"
+                            DestinationPageUrl="~/Launcher.aspx"
                             FailureText="Usuario o contraseña incorrectos.">
 
                             <LayoutTemplate>

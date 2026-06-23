@@ -7,11 +7,20 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ConsultaLicencias.Account
+namespace ConsultaLicencias
 {
 
 
-    public partial class Logout
+    public partial class Launcher
     {
+
+        /// <summary>
+        /// Control lnkHistorico.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkHistorico;
     }
 }

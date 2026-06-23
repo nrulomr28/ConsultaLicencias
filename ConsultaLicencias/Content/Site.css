@@ -273,3 +273,184 @@ body {
     padding: 10px 20px;
     cursor: pointer;
 }
+
+.persona-direccion {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.acciones-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn-detalle,
+.btn-descargar {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+}
+
+.btn-detalle {
+    background: #0f2f5f;
+    color: white !important;
+}
+
+    .btn-detalle:hover {
+        background: #0b2347;
+    }
+
+.btn-descargar {
+    background: #7a2030;
+    color: white !important;
+}
+
+    .btn-descargar:hover {
+        background: #611927;
+    }
+
+.persona-rfc,
+.persona-curp {
+    margin-top: 4px;
+}
+
+.persona-nombre {
+    font-size: 16px;
+    font-weight: 700;
+    color: #7a2030;
+    margin-bottom: 6px;
+}
+.acciones-grid {
+    min-width: 140px;
+}
+
+.btn-descargar {
+    display: block;
+}
+
+
+/* =====================================================
+   LAUNCHER
+   ===================================================== */
+
+.launcher-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+
+.launcher-card {
+    width: 420px;
+    background: white;
+    border-radius: 12px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+.launcher-icon {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.launcher-title {
+    color: #7a2030;
+    margin-bottom: 15px;
+}
+
+.launcher-description {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.btn-launcher {
+    display: inline-block;
+    background: #7a2030;
+    color: white !important;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+    .btn-launcher:hover {
+        background: #611927;
+    }
+
+
+/* ==========================================
+   BUSCADOR HISTÓRICO
+   ========================================== */
+
+.search-card {
+    width: 900px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 14px;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    border-top: 5px solid #7a2030;
+}
+
+.search-title {
+    margin: 0;
+    color: #611927;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.search-subtitle {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: #6b7280;
+}
+
+.search-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.search-input {
+    flex: 1;
+    height: 48px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 0 15px;
+    font-size: 15px;
+}
+
+    .search-input:focus {
+        outline: none;
+        border-color: #7a2030;
+        box-shadow: 0 0 0 3px rgba(122,32,48,.15);
+    }
+
+.btn-search {
+    height: 48px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 8px;
+    background: #7a2030;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    .btn-search:hover {
+        background: #611927;
+    }
+
+.grid-modern {
+    width: 96%;
+    margin: 0 auto 30px auto;
+    border-collapse: collapse;
+}

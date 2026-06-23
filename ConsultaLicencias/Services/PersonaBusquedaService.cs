@@ -122,11 +122,23 @@ namespace ConsultaLicencias.Services
                     .Select(x => new PersonaBusquedaDto
                     {
                         IdPersona = x.ID_PERSONA,
+
                         Nombre = x.PER_NOMBRE,
                         ApellidoPaterno = x.PER_APELLIDO_PATERNO,
                         ApellidoMaterno = x.PER_APELLIDO_MATERNO,
+
                         CURP = x.PER_CURP,
-                        RFC = x.PER_RFC
+                        RFC = x.PER_RFC,
+
+                        Calle = x.PER_DOM_CALLE,
+                        NumeroExterior = x.PER_DOM_NUM_EXT,
+                        NumeroInterior = x.PER_DOM_NUM_INT,
+                        CodigoPostal = x.PER_DOM_CP,
+
+                        Colonia = x.C_COLONIA.DSC_COLONIA,
+                        Municipio =
+                                x.C_COLONIA.C_DELEG_MUNICIPIO.DSC_DELEG_MUNICIPIO
+
                     })
                     .Take(MaxResultados)
                     .ToList();

@@ -7,25 +7,31 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">    
 
-           <div class="busqueda-card">
+           <div class="search-card">
 
-    <h2>Consulta Histórica</h2>
+    <h2 class="search-title">
+        Consulta en histórico de licencias.
+    </h2>
 
-    <p>
+    <p class="search-subtitle">
         Busque por CURP, RFC, nombre o apellidos.
     </p>
 
-    <asp:TextBox
-        ID="txtBusqueda"
-        runat="server"
-        CssClass="txt-busqueda" />
+    <div class="search-row">
 
-    <asp:Button
-        ID="btnBuscar"
-        runat="server"
-        Text="Buscar"
-        CssClass="btn-buscar"
-        OnClick="btnBuscar_Click" />
+        <asp:TextBox
+            ID="txtBusqueda"
+            runat="server"
+            CssClass="search-input" />
+
+        <asp:Button
+            ID="btnBuscar"
+            runat="server"
+            Text="Buscar"
+            CssClass="btn-search"
+            OnClick="btnBuscar_Click" />
+
+    </div>
 
 </div>
     
@@ -38,9 +44,11 @@
     CssClass="grid-modern"
     AllowPaging="True"
     Visible="False"
-    OnSelectedIndexChanged="gvBusqueda_SelectedIndexChanged">
+    OnSelectedIndexChanged="gvBusqueda_SelectedIndexChanged" OnRowCommand="gvBusqueda_RowCommand">
 
     <Columns>
+
+        
 
         <asp:TemplateField HeaderText="">
             <ItemTemplate>
@@ -57,41 +65,76 @@
             </ItemTemplate>
         </asp:TemplateField>
 
+        
+
         <asp:TemplateField HeaderText="Ciudadano">
             <ItemTemplate>
 
                 <div class="persona-nombre">
+
                     <%# Eval("Nombre") %>
                     <%# Eval("ApellidoPaterno") %>
                     <%# Eval("ApellidoMaterno") %>
+
                 </div>
 
                 <div class="persona-rfc">
-                    RFC: <%# Eval("RFC") %>
+
+                    <strong>RFC:</strong>
+                    <%# Eval("RFC") %>
+
                 </div>
 
                 <div class="persona-curp">
-                    CURP: <%# Eval("CURP") %>
+
+                    <strong>CURP:</strong>
+                    <%# Eval("CURP") %>
+
+                </div>
+
+                <div class="persona-direccion">
+
+                    <strong>Dirección:</strong><br />
+
+                    <%# Eval("DireccionCompleta") %>
+
+                    <br />
+
+                    <%# Eval("UbicacionCompleta") %>
+
                 </div>
 
             </ItemTemplate>
         </asp:TemplateField>
 
-        <asp:BoundField
-            DataField="Municipio"
-            HeaderText="Municipio" />
+        
 
-        <asp:TemplateField HeaderText="">
+        <asp:TemplateField HeaderText="Acciones">
+            <ItemStyle Width="180px" />
+
             <ItemTemplate>
 
-                <asp:LinkButton
-                    ID="btnSeleccionar"
-                    runat="server"
-                    CommandName="Select"
-                    CssClass="btn-detalle"
-                    Text="Ver detalle" />
+                <div class="acciones-grid">
+
+                    <asp:LinkButton
+                        ID="btnSeleccionar"
+                        runat="server"
+                        CommandName="Select"
+                        CssClass="btn-detalle"
+                        Text="Ver detalle" />
+
+                    <asp:LinkButton
+                        ID="btnDescargarZip"
+                        runat="server"
+                        CommandName="DescargarZip"
+                        CommandArgument='<%# Eval("IdPersona") %>'
+                        CssClass="btn-descargar"
+                        Text="Descargar ZIP" />
+
+                </div>
 
             </ItemTemplate>
+
         </asp:TemplateField>
 
     </Columns>
