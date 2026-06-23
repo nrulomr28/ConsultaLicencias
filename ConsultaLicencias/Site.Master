@@ -28,38 +28,69 @@
 
     <form id="form1" runat="server">
 
-        <asp:ScriptManager
-            ID="ScriptManager1"
-            runat="server">
-        </asp:ScriptManager>
+    <asp:ScriptManager
+        ID="ScriptManager1"
+        runat="server">
+    </asp:ScriptManager>
 
-        <div class="header">
+    <div class="header">
 
-            <div class="header-title">
-                Consulta de Licencias
+        <div class="header-content">
+
+            <div>
+
+                <div class="header-title">
+                    Consulta de Licencias
+                </div>
+
+                <div class="header-subtitle">
+                    Secretaría de Seguridad Pública del Estado de Veracruz
+                </div>
+
             </div>
 
-            <div class="header-subtitle">
-                Secretaría de Seguridad Pública del Estado de Veracruz
-            </div>
+            <div class="header-actions">
+
+    <div class="header-badge">
+
+        Consulta Histórica
+        <br />
+        Expedientes Digitales
+
+    </div>
+
+    <asp:HyperLink
+        ID="lnkCerrarSesion"
+        runat="server"
+        NavigateUrl="~/Account/Logout.aspx"
+        CssClass="btn-logout"
+        Visible="false">
+        Cerrar sesión
+    </asp:HyperLink>
+
+</div>
+
+            
 
         </div>
 
-        <asp:ContentPlaceHolder
-            ID="FeaturedContent"
-            runat="server">
-        </asp:ContentPlaceHolder>
+    </div>
 
-        <asp:ContentPlaceHolder
-            ID="MainContent"
-            runat="server">
-        </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder
+        ID="FeaturedContent"
+        runat="server">
+    </asp:ContentPlaceHolder>
 
-        <div class="footer">
-            Secretaría de Seguridad Pública del Estado de Veracruz
-        </div>
+    <asp:ContentPlaceHolder
+        ID="MainContent"
+        runat="server">
+    </asp:ContentPlaceHolder>
 
-    </form>
+    <div class="footer">
+        Secretaría de Seguridad Pública del Estado de Veracruz
+    </div>
+
+</form>
 
 </body>
 

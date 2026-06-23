@@ -15,7 +15,7 @@ namespace ConsultaLicencias
             if (!IsPostBack)
             {
                 gvBusqueda.Visible = false;
-                Panel1.Visible = false;
+                panelDocumentos.Visible = false;
             }
         }
 
@@ -35,9 +35,14 @@ namespace ConsultaLicencias
             gvBusqueda.DataSource = resultados;
             gvBusqueda.DataBind();
 
+            lblResultados.Text =
+                        $"{resultados.Count:N0} resultado(s) encontrado(s)";
+
+            lblResultados.Visible = true;
+
             gvBusqueda.Visible = resultados.Any();
 
-            Panel1.Visible = false;
+            panelDocumentos.Visible = false;
         }
 
 
@@ -62,11 +67,11 @@ namespace ConsultaLicencias
         {
             if (gvBusqueda.SelectedIndex < 0)
             {
-                Panel1.Visible = false;
+                panelDocumentos.Visible = false;
                 return;
             }
 
-            Panel1.Visible = true;
+            panelDocumentos.Visible = true;
 
             string idPersona =
                 gvBusqueda.SelectedDataKey.Value.ToString();
@@ -242,6 +247,28 @@ namespace ConsultaLicencias
 
                     Teléfono: {persona.PER_TELEFONO}
                     Correo: {persona.PER_CORREO}");
+        }
+
+        protected void gvBusqueda_PageIndexChanging(
+                object sender,
+                GridViewPageEventArgs e)
+        {
+            gvBusqueda.PageIndex = e.NewPageIndex;
+
+            string criterio =
+                txtBusqueda.Text.Trim();
+
+            var service =
+                new PersonaBusquedaService();
+
+            var resultados =
+                service.Buscar(criterio);
+
+            gvBusqueda.DataSource = resultados;
+            gvBusqueda.DataBind();
+
+            lblResultados.Text =
+                $"{resultados.Count:N0} resultado(s) encontrado(s)";
         }
     }
 }

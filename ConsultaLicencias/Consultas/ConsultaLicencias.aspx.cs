@@ -1,12 +1,9 @@
-﻿using Microsoft.Data.OData;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Web;
-using System.Web.DynamicData;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace ConsultaLicencias

@@ -9,7 +9,7 @@ namespace ConsultaLicencias.Services
 {
     public class PersonaBusquedaService
     {
-        private const int MaxResultados = 50;
+        private const int MaxResultados = 200;
 
         public List<PersonaBusquedaDto> Buscar(string criterio)
         {
@@ -30,30 +30,54 @@ namespace ConsultaLicencias.Services
 
             using (var contexto = new SILCVEREntities())
             {
-                IQueryable<C_PERSONA> query = contexto.C_PERSONA
-                    .AsNoTracking();
+                IQueryable<C_PERSONA> query =
+                    contexto.C_PERSONA
+                        .AsNoTracking();
 
                 // =====================================================
                 // CURP EXACTA
                 // =====================================================
-                if (Regex.IsMatch(criterio,
+                if (Regex.IsMatch(
+                    criterio,
                     @"^[A-Z]{4}[0-9]{6}[A-Z]{8}$"))
                 {
-                    query = query.Where(x => x.PER_CURP == criterio);
+                    query = query.Where(x =>
+                        x.PER_CURP == criterio);
                 }
 
                 // =====================================================
-                // CURP PARCIAL
+                // RFC / CURP PARCIAL
+                //
+                // Primero intento RFC.
+                // Si no encuentro resultados,
+                // intento CURP.
+                //
+                // Ejemplos:
                 // MERA850101
                 // MERA850101HVZ
                 // =====================================================
                 else if (!criterio.Contains(" ")
                          && criterio.Length >= 8
-                         && Regex.IsMatch(criterio,
+                         && Regex.IsMatch(
+                             criterio,
                              @"^[A-Z0-9]+$"))
                 {
-                    query = query.Where(x =>
-                        x.PER_CURP.StartsWith(criterio));
+                    var resultadosRfc = contexto.C_PERSONA
+                        .AsNoTracking()
+                        .Where(x =>
+                            x.PER_RFC.StartsWith(criterio));
+
+                    if (resultadosRfc.Any())
+                    {
+                        query = resultadosRfc;
+                    }
+                    else
+                    {
+                        query = contexto.C_PERSONA
+                            .AsNoTracking()
+                            .Where(x =>
+                                x.PER_CURP.StartsWith(criterio));
+                    }
                 }
 
                 // =====================================================
@@ -70,16 +94,41 @@ namespace ConsultaLicencias.Services
                 // =====================================================
                 // DOS PALABRAS
                 // MESTIZO RAMIREZ
+                // RAUL MESTIZO
+                // LILIA RAMIREZ
                 // =====================================================
                 else if (terminos.Count == 2)
                 {
-                    string apPat = terminos[0];
-                    string apMat = terminos[1];
+                    string termino1 = terminos[0];
+                    string termino2 = terminos[1];
 
                     query = query.Where(x =>
-                        x.PER_APELLIDO_PATERNO.Contains(apPat)
-                        &&
-                        x.PER_APELLIDO_MATERNO.Contains(apMat));
+
+                        // Nombre + Apellido Paterno
+                        (
+                            x.PER_NOMBRE.Contains(termino1)
+                            &&
+                            x.PER_APELLIDO_PATERNO.Contains(termino2)
+                        )
+
+                        ||
+
+                        // Nombre + Apellido Materno
+                        (
+                            x.PER_NOMBRE.Contains(termino1)
+                            &&
+                            x.PER_APELLIDO_MATERNO.Contains(termino2)
+                        )
+
+                        ||
+
+                        // Apellido Paterno + Materno
+                        (
+                            x.PER_APELLIDO_PATERNO.Contains(termino1)
+                            &&
+                            x.PER_APELLIDO_MATERNO.Contains(termino2)
+                        )
+                    );
                 }
 
                 // =====================================================
@@ -112,7 +161,9 @@ namespace ConsultaLicencias.Services
                         ||
                         x.PER_APELLIDO_PATERNO.Contains(t)
                         ||
-                        x.PER_APELLIDO_MATERNO.Contains(t));
+                        x.PER_APELLIDO_MATERNO.Contains(t)
+                        ||
+                        x.PER_RFC.Contains(t));
                 }
 
                 return query
@@ -136,9 +187,11 @@ namespace ConsultaLicencias.Services
                         CodigoPostal = x.PER_DOM_CP,
 
                         Colonia = x.C_COLONIA.DSC_COLONIA,
-                        Municipio =
-                                x.C_COLONIA.C_DELEG_MUNICIPIO.DSC_DELEG_MUNICIPIO
 
+                        Municipio =
+                            x.C_COLONIA
+                                .C_DELEG_MUNICIPIO
+                                .DSC_DELEG_MUNICIPIO
                     })
                     .Take(MaxResultados)
                     .ToList();

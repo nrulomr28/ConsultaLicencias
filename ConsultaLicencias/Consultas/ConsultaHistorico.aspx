@@ -35,6 +35,11 @@
 
 </div>
     
+    <asp:Label
+    ID="lblResultados"
+    runat="server"
+    CssClass="resultado-count"
+    Visible="false" />
 
     <asp:GridView
     ID="gvBusqueda"
@@ -44,7 +49,10 @@
     CssClass="grid-modern"
     AllowPaging="True"
     Visible="False"
-    OnSelectedIndexChanged="gvBusqueda_SelectedIndexChanged" OnRowCommand="gvBusqueda_RowCommand">
+        OnSelectedIndexChanged="gvBusqueda_SelectedIndexChanged" 
+        OnRowCommand="gvBusqueda_RowCommand"
+        OnPageIndexChanging="gvBusqueda_PageIndexChanging"
+        PagerStyle-CssClass="grid-pager">
 
     <Columns>
 
@@ -147,7 +155,7 @@
             <asp:ControlParameter ControlID="gvBusqueda" Name="ID_PERSONA" PropertyName="SelectedValue" />
         </WhereParameters>
     </asp:EntityDataSource>
-    <asp:Panel ID="Panel1" runat="server" Visible ="true" >
+    <asp:Panel ID="panelDocumentos" runat="server" Visible ="true" >
         <br />
         <asp:Image ID="Imagen1" runat="server"  />
         <br />

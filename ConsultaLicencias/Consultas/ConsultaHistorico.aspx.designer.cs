@@ -33,6 +33,15 @@ namespace ConsultaLicencias
         protected global::System.Web.UI.WebControls.Button btnBuscar;
 
         /// <summary>
+        /// Control lblResultados.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResultados;
+
+        /// <summary>
         /// Control gvBusqueda.
         /// </summary>
         /// <remarks>
@@ -51,13 +60,13 @@ namespace ConsultaLicencias
         protected global::System.Web.UI.WebControls.EntityDataSource EntityDataSourcePersonaSeleccionada;
 
         /// <summary>
-        /// Control Panel1.
+        /// Control panelDocumentos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.WebControls.Panel panelDocumentos;
 
         /// <summary>
         /// Control Imagen1.
